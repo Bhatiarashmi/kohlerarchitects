@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashmi Bhatia | Architecture Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-logo">RB</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-right">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#design-skills">Design Skills</a></li>
+                <li><a href="#studio">Studio</a></li>
+                <li><a href="#fine-art">Fine Art</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-pre">University of Oregon &mdash; B.Arch</p>
+            <h1 class="hero-title">
+                <span class="hero-name">Rashmi</span>
+                <span class="hero-name">Bhatia</span>
+            </h1>
+            <p class="hero-sub">Architecture &bull; Design &bull; Art</p>
+            <div class="hero-cta">
+                <a href="#design-skills" class="btn btn-primary">View Work</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="section-label">About</p>
+                    <h2 class="section-title">Designing spaces where beauty meets structure</h2>
+                    <p class="about-body">
+                        I am a first-year architecture student in the University of Oregon's 5-year B.Arch program, 
+                        with two semesters of intensive design coursework completed. My work bridges hand-crafted techniques 
+                        &mdash; graphite, charcoal, physical model building &mdash; with digital tools like AutoCAD, 
+                        Adobe Illustrator, and Photoshop.
+                    </p>
+                    <p class="about-body">
+                        Before Oregon, I completed a 4-week Architecture Summer Career Workshop at Cal Poly SLO, 
+                        trained at Ichen Art Academy for three years, and founded a graphic design business, 
+                        <em>Brushmi's Designs</em>. As a Distinguished Eagle Scout, I bring discipline, leadership, 
+                        and community-mindedness to everything I create.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-num">2</span>
+                            <span class="stat-label">Semesters</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">4.1</span>
+                            <span class="stat-label">GPA &mdash; Dean's List</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">20+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCH 202 Design Skills Section -->
+    <section class="section projects-section" id="design-skills">
+        <div class="container">
+            <p class="section-label">ARCH 202 &mdash; Design Skills</p>
+            <h2 class="section-title">Foundations of Architectural Representation</h2>
+            <p class="section-intro">
+                This course transformed my perception of the built environment, highlighting the minuscule 
+                architectural details that many overlook. By engaging with techniques like orthographic and 
+                paraline projection, color media, and physical model making, I came to understand how aesthetic 
+                beauty can coexist within a structurally sound, livable space.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Assignment 01 -->
+            <div class="project-card" data-category="hand">
+                <div class="project-images">
+                    <img src="images/arch202_01a_line_tone_color.jpg" alt="Line, Tone, Color, Perception - Sheet 1" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 01</span>
+                    <h3>Line, Tone, Color, Perception</h3>
+                    <p>Explorations in graphite and colored pencil examining fundamental elements of visual perception and architectural representation.</p>
+                    <div class="project-meta">
+                        <span>Graphite &amp; Colored Pencil</span>
+                        <span>11" x 17"</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="hand">
+                <div class="project-images">
+                    <img src="images/arch202_01b_line_tone_color.jpg" alt="Line, Tone, Color, Perception - Sheet 2" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 01 (cont.)</span>
+                    <h3>Line, Tone, Color, Perception</h3>
+                    <p>Further investigations into how line weight, tonal value, and color interact to create depth and spatial understanding.</p>
+                    <div class="project-meta">
+                        <span>Graphite &amp; Colored Pencil</span>
+                        <span>11" x 14"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 02 -->
+            <div class="project-card" data-category="digital">
+                <div class="project-images">
+                    <img src="images/arch202_02a_analytical_diagrams.jpg" alt="Analytical Diagrams - Digital" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 02</span>
+                    <h3>Analytical Diagrams</h3>
+                    <p>Digital diagramming exploring architectural analysis through abstraction. Translating spatial relationships into clear visual communication.</p>
+                    <div class="project-meta">
+                        <span>Adobe Illustrator</span>
+                        <span>11" x 17"</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="model">
+                <div class="project-images">
+                    <img src="images/arch202_02b_analytical_diagrams_model.jpg" alt="Analytical Diagrams - Physical Model" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 02 (Model)</span>
+                    <h3>Analytical Diagrams &mdash; Physical Model</h3>
+                    <p>Three-dimensional interpretation of analytical diagrams, translating 2D analysis into a physical cardboard and paper model.</p>
+                    <div class="project-meta">
+                        <span>Paper &amp; Cardboard</span>
+                        <span>10" x 8" x 4"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 03 -->
+            <div class="project-card wide" data-category="hand">
+                <div class="project-images">
+                    <img src="images/arch202_03_orthographic_i.jpg" alt="Orthographic I" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 03</span>
+                    <h3>Orthographic I</h3>
+                    <p>Plan, section, and elevation drawings rendered in graphite. Understanding how buildings are documented through precise orthographic projection.</p>
+                    <div class="project-meta">
+                        <span>Graphite</span>
+                        <span>19" x 25"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 04 -->
+            <div class="project-card" data-category="hand">
+                <div class="project-images">
+                    <img src="images/arch202_04_orthographic_ii.jpg" alt="Orthographic II" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 04</span>
+                    <h3>Orthographic II</h3>
+                    <p>Advanced orthographic projection exploring more complex building forms and the relationship between plan and elevation.</p>
+                    <div class="project-meta">
+                        <span>Graphite</span>
+                        <span>14" x 11"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 05 -->
+            <div class="project-card" data-category="hand">
+                <div class="project-images">
+                    <img src="images/arch202_05_paraline_i.jpg" alt="Paraline Projection I" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 05</span>
+                    <h3>Paraline Projection I</h3>
+                    <p>Axonometric and isometric drawings combining graphite precision with colored pencil to reveal three-dimensional spatial relationships.</p>
+                    <div class="project-meta">
+                        <span>Graphite &amp; Colored Pencil</span>
+                        <span>18" x 24"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 06 -->
+            <div class="project-card" data-category="hand">
+                <div class="project-images">
+                    <img src="images/arch202_06_perspective_i.jpg" alt="Perspective Projection I" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 06</span>
+                    <h3>Perspective Projection I</h3>
+                    <p>Perspective drawing enriched with paper collage, bringing depth and materiality to architectural visualization through mixed media.</p>
+                    <div class="project-meta">
+                        <span>Graphite, Colored Pencil &amp; Paper Collage</span>
+                        <span>18" x 24"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 07 -->
+            <div class="project-card" data-category="digital">
+                <div class="project-images">
+                    <img src="images/arch202_07_orthographic_iii_autocad.jpg" alt="Orthographic III - AutoCAD" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 07</span>
+                    <h3>Orthographic Projection III</h3>
+                    <p>Transitioning from hand to digital: precise orthographic drawings produced in AutoCAD, bridging traditional skills with industry-standard tools.</p>
+                    <div class="project-meta">
+                        <span>AutoCAD</span>
+                        <span>18" x 24"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 08 -->
+            <div class="project-card" data-category="digital">
+                <div class="project-images">
+                    <img src="images/arch202_08_digital_collage.jpg" alt="Digital Collage" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 08</span>
+                    <h3>Digital Collage</h3>
+                    <p>Compositing imagery in Photoshop to create evocative architectural narratives through layering, texture, and digital manipulation.</p>
+                    <div class="project-meta">
+                        <span>Adobe Photoshop</span>
+                        <span>11" x 17"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assignment 09 -->
+            <div class="project-card" data-category="hand">
+                <div class="project-images">
+                    <img src="images/arch202_09_paraline_ii.jpg" alt="Paraline Projection II" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Assignment 09</span>
+                    <h3>Paraline Projection II</h3>
+                    <p>Advanced paraline drawing in graphite demonstrating refined technique and deeper understanding of three-dimensional representation.</p>
+                    <div class="project-meta">
+                        <span>Graphite</span>
+                        <span>14" x 14"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Studio / Portfolio 2 Section -->
+    <section class="section projects-section contrast-section" id="studio">
+        <div class="container">
+            <p class="section-label">Architecture Studio</p>
+            <h2 class="section-title">Design Studio &mdash; From Concept to Model</h2>
+            <p class="section-intro">
+                Studio coursework ranging from photographic composition and diagramming to 
+                physical model building, city design, and live-work structures. These projects explore 
+                materiality, light, spatial sequence, and the relationship between people and the built environment.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Framed Composition -->
+            <div class="project-card" data-category="photography">
+                <div class="project-images">
+                    <img src="images/p2_framed_composition.jpg" alt="Framed Composition" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Photography</span>
+                    <h3>Framed Composition</h3>
+                    <p>De-objectifying everyday imagery through careful framing and composition, rendering objects practically unrecognizable and unique in their own way.</p>
+                    <div class="project-meta">
+                        <span>Photography</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagramming -->
+            <div class="project-card" data-category="hand">
+                <div class="project-images">
+                    <img src="images/p2_diagramming.jpg" alt="Diagramming" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Analytical</span>
+                    <h3>Diagramming</h3>
+                    <p>Exploring intricate structural details through stippling and cross-hatching on transparent paper, reimagining how objects are perceived.</p>
+                    <div class="project-meta">
+                        <span>Transparent Paper &amp; Markers</span>
+                        <span>14" x 17"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surface-Plane -->
+            <div class="project-card" data-category="model">
+                <div class="project-images">
+                    <img src="images/p2_surface_plane.jpg" alt="Surface-Plane" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Model Building</span>
+                    <h3>Surface-Plane</h3>
+                    <p>Exploring the dynamics of surface planes through triangular forms, creating a sense of movement with floating elements that evoke balance and tension.</p>
+                    <div class="project-meta">
+                        <span>Bristol &amp; Applicator Sticks</span>
+                        <span>7" x 3"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Light Box -->
+            <div class="project-card" data-category="model">
+                <div class="project-images">
+                    <img src="images/p2_light_box.jpg" alt="Light Box" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Model Building</span>
+                    <h3>Light Box</h3>
+                    <p>Examining how light transforms space. A sun-shaped cutout casts light while purple paper behind a Bristol moon creates atmospheric color &mdash; demonstrating light's impact on the built environment.</p>
+                    <div class="project-meta">
+                        <span>Cardboard, Bristol &amp; Construction Paper</span>
+                        <span>8" x 9" x 4"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Site Integration -->
+            <div class="project-card" data-category="model">
+                <div class="project-images">
+                    <img src="images/p2_site_integration.jpg" alt="Site Integration" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Model Building</span>
+                    <h3>Site Integration</h3>
+                    <p>Intentional structure placement with a sun-lit pathway, light box on a hill, and applicator sticks symbolizing trees &mdash; integrating architecture with landscape.</p>
+                    <div class="project-meta">
+                        <span>Chipboard &amp; Cardboard</span>
+                        <span>12" x 24"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Long Span -->
+            <div class="project-card wide" data-category="model">
+                <div class="project-images">
+                    <img src="images/p2_long_span.jpg" alt="Long Span Bridge" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Collaboration &bull; Model Building</span>
+                    <h3>Long Span</h3>
+                    <p>A functional 3-foot bridge built entirely from applicator sticks. The hexagonal base piece was replicated and connected to create a structurally sound, aesthetically cohesive span capable of rolling a basketball across.</p>
+                    <div class="project-meta">
+                        <span>Applicator Sticks</span>
+                        <span>3 ft span</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- [RE] Defining City -->
+            <div class="project-card wide" data-category="model">
+                <div class="project-images">
+                    <img src="images/p2_redefining_city.jpg" alt="[RE]Defining City - Cataracta" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Collaboration &bull; Urban Design</span>
+                    <h3>[RE] Defining City &mdash; Cataracta</h3>
+                    <p>A sustainable rainforest city where humans and animals coexist. Featuring eco-friendly homes, treehouses, gondola systems, hydroponic farming, and wind/hydro turbines. Complete with map, diorama, and physical model.</p>
+                    <div class="project-meta">
+                        <span>Bristol, Construction Paper, Wood &amp; Cardboard</span>
+                        <span>Map + Model + Diorama</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live-Work-Share -->
+            <div class="project-card" data-category="model">
+                <div class="project-images">
+                    <img src="images/p2_live_work_share.jpg" alt="Live-Work-Share" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Model Building</span>
+                    <h3>Live &mdash; Work &mdash; Share</h3>
+                    <p>A to-scale live-work structure featuring an innovative triangular solar panel walkway, open gable roof, and pyramidal side roofs &mdash; designed for living, working, and sharing with loved ones.</p>
+                    <div class="project-meta">
+                        <span>Basswood, Bristol &amp; Applicator Sticks</span>
+                        <span>4" x 7"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sketchbook -->
+            <div class="project-card" data-category="hand">
+                <div class="project-images">
+                    <img src="images/p2_sketchbook.jpg" alt="Little Black Sketchbook" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <span class="project-tag">Personal</span>
+                    <h3>Little Black Sketchbook</h3>
+                    <p>My most prized possession. I take it everywhere &mdash; whenever I see something interesting, I sketch it. I'm more likely to remember the beauty of a place I have drawn than simply photographed.</p>
+                    <div class="project-meta">
+                        <span>Pen &amp; Paper</span>
+                        <span>6" x 4" &mdash; Ongoing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fine Art Section -->
+    <section class="section projects-section" id="fine-art">
+        <div class="container">
+            <p class="section-label">Fine Art</p>
+            <h2 class="section-title">Charcoal Portraits</h2>
+            <p class="section-intro">
+                Trained at Ichen Art Academy, I've created over 35 oil paintings, charcoal drawings, and digital art pieces. 
+                These charcoal portraits hold deep personal meaning &mdash; each capturing not just a likeness, 
+                but the warmth and spirit of the people I love.
+            </p>
+        </div>
+
+        <div class="art-gallery">
+            <div class="art-piece">
+                <img src="images/p2_nani_charcoal.jpg" alt="Nani - Charcoal Portrait" loading="lazy">
+                <div class="art-overlay">
+                    <h3>Nani</h3>
+                    <p>A portrait of the light of my life, my grandmother. Her wrinkles represent her everlasting smile and her eyes shine with pride. She is what I see when I hear the word love.</p>
+                    <span>Charcoal &bull; 12" x 14" &bull; 2023</span>
+                </div>
+            </div>
+            <div class="art-piece">
+                <img src="images/p2_bliss_charcoal.jpg" alt="Bliss - Charcoal Portrait" loading="lazy">
+                <div class="art-overlay">
+                    <h3>Bliss</h3>
+                    <p>She represents the feeling of wind running through your hair &mdash; absolute calm and contentment. Light moves across her face while dark values define her characteristics.</p>
+                    <span>Charcoal &bull; 12" x 14" &bull; 2022</span>
+                </div>
+            </div>
+            <div class="art-piece">
+                <img src="images/p2_ms_khan_charcoal.jpg" alt="Ms. Khan - Charcoal Portrait" loading="lazy">
+                <div class="art-overlay">
+                    <h3>Ms. Khan</h3>
+                    <p>A memorial portrait for my friend whose mother passed away. I hoped to capture her mother's warmth and patience. This piece taught me that art can heal &mdash; and that everything I create should have meaning and purpose.</p>
+                    <span>Charcoal &bull; 12" x 14" &bull; 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Experience Section -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <p class="section-label">Skills &amp; Experience</p>
+            <h2 class="section-title">Tools, Training &amp; Background</h2>
+
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Design Software</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">AutoCAD</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Adobe Illustrator</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Adobe Photoshop</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Rhino</span><span class="skill-level intermediate"></span></li>
+                        <li><span class="skill-name">Revit</span><span class="skill-level intermediate"></span></li>
+                        <li><span class="skill-name">Procreate / Canva</span><span class="skill-level proficient"></span></li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Hand Techniques</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">Graphite Drawing</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Charcoal Portraiture</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Colored Pencil</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Oil Painting</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Physical Model Building</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Paper Collage</span><span class="skill-level proficient"></span></li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Architecture Skills</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">Orthographic Projection</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Paraline / Axonometric</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Perspective Drawing</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Site Analysis</span><span class="skill-level intermediate"></span></li>
+                        <li><span class="skill-name">Concept Modeling</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Digital Collage</span><span class="skill-level proficient"></span></li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>Other</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">JavaScript / Python</span><span class="skill-level intermediate"></span></li>
+                        <li><span class="skill-name">Graphic Design</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Photography</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Teaching</span><span class="skill-level proficient"></span></li>
+                        <li><span class="skill-name">Leadership</span><span class="skill-level proficient"></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-timeline">
+                <h3 class="timeline-title">Education &amp; Experience</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025 &ndash; Present</div>
+                        <div class="timeline-content">
+                            <h4>University of Oregon &mdash; B.Arch</h4>
+                            <p>5-year professional architecture program. Dean's List, 4.1 GPA. Active in AIA student chapter and South Asian Cultural Alliance.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Summer 2024</div>
+                        <div class="timeline-content">
+                            <h4>Cal Poly SLO &mdash; Architecture Summer Workshop</h4>
+                            <p>4-week intensive in design fundamentals, structural engineering, site/community planning. Final gallery exhibition.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 &ndash; Present</div>
+                        <div class="timeline-content">
+                            <h4>Brushmi's Designs &mdash; Founder</h4>
+                            <p>Graphic design business specializing in logos and merchandise. Clients include school teams, student coalitions, and a medical podcast.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 &ndash; 2024</div>
+                        <div class="timeline-content">
+                            <h4>Ichen Art Academy</h4>
+                            <p>Mastered charcoal portraiture, oil painting, and digital art. Created 35+ pieces across multiple media. AP Studio Art Bootcamp.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 &ndash; 2025</div>
+                        <div class="timeline-content">
+                            <h4>Boy Scouts of America &mdash; Distinguished Eagle Scout</h4>
+                            <p>Co-founded an all-female troop (60+ members). Assistant Senior Patrol Leader. Eagle Project: community mural at Fremont Christian School.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <p class="section-label">Contact</p>
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-body">Interested in collaboration, opportunities, or just want to chat about architecture and design?</p>
+            <div class="contact-links">
+                <a href="mailto:bhatiarashmi857@gmail.com" class="contact-link">
+                    <span class="contact-icon">&#9993;</span>
+                    <span>bhatiarashmi857@gmail.com</span>
+                </a>
+                <a href="https://www.instagram.com/brushmiii/" target="_blank" rel="noopener" class="contact-link">
+                    <span class="contact-icon">&#9733;</span>
+                    <span>@brushmiii</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Rashmi Bhatia &bull; University of Oregon B.Arch</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="" alt="" id="lightboxImg">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
