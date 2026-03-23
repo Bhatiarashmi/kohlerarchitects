@@ -171,4 +171,31 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.projects-grid, .art-gallery, .skills-grid').forEach(grid => {
         staggerObserver.observe(grid);
     });
+
+    // ── Copyright Protection ──────────────────────────────
+    // Disable right-click context menu on images
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            return false;
+        });
+        // Disable drag
+        img.setAttribute('draggable', 'false');
+        img.style.webkitUserDrag = 'none';
+    });
+
+    // Disable "Save Image As" via long-press on mobile
+    document.addEventListener('touchstart', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.target.style.pointerEvents = 'none';
+            setTimeout(() => { e.target.style.pointerEvents = ''; }, 500);
+        }
+    }, { passive: false });
+
+    // Disable keyboard shortcuts for saving (Ctrl+S / Cmd+S)
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+        }
+    });
 });

@@ -330,6 +330,20 @@ ul { list-style: none; }
 [data-theme="dark"] .contrast-section .project-meta { border-top-color: var(--border); }
 [data-theme="dark"] .contrast-section .project-tag { color: var(--accent-dark); }
 
+/* ── Dean's List link ────────────────────────────────── */
+.deans-list-link {
+    color: var(--accent-dark);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    transition: color var(--transition), text-decoration-color var(--transition);
+}
+.deans-list-link:hover {
+    color: var(--text);
+    text-decoration-color: var(--text);
+}
+
 /* ==========================================================
    ABOUT
    ========================================================== */
@@ -587,6 +601,42 @@ ul { list-style: none; }
 }
 
 /* ==========================================================
+   RESUME EMBED
+   ========================================================== */
+.resume-section .section-intro { margin-bottom: 1.5rem; }
+.resume-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.resume-download-btn {
+    display: inline-flex;
+    align-items: center;
+}
+.resume-embed {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--bg-card);
+}
+.resume-embed iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    display: block;
+}
+[data-theme="dark"] .resume-embed {
+    border-color: var(--border);
+    background: var(--bg-card);
+}
+@media (max-width: 768px) {
+    .resume-embed iframe { height: 500px; }
+    .resume-actions { flex-direction: column; align-items: flex-start; }
+}
+
+/* ==========================================================
    CONTACT
    ========================================================== */
 .contact-section {
@@ -646,6 +696,22 @@ ul { list-style: none; }
     letter-spacing: 0.05em;
     color: var(--text-secondary);
     border-top: 1px solid var(--border);
+}
+.copyright-notice {
+    font-size: 0.6rem;
+    color: var(--text-tertiary);
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Image protection ────────────────────────────────── */
+img {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 /* ==========================================================
