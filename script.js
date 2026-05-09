@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const animateElements = () => {
         const selectors = [
             '.project-card',
+            '.zine-cover-card',
+            '.zine-content-card',
             '.art-piece',
             '.about-text',
             '.skill-group',

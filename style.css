@@ -50,6 +50,8 @@
 body,
 .nav,
 .project-card,
+.zine-cover-card,
+.zine-content-card,
 .skill-group h3,
 .timeline::before,
 .about-stats,
@@ -452,6 +454,185 @@ ul { list-style: none; }
 }
 
 /* ==========================================================
+   BOTTU MAG
+   ========================================================== */
+.zine-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 8% 16%, rgba(255, 232, 167, 0.5) 0 7rem, transparent 7.1rem),
+        radial-gradient(circle at 92% 88%, rgba(127, 25, 16, 0.35) 0 10rem, transparent 10.1rem),
+        linear-gradient(135deg, #f8b85f 0%, #f37a35 42%, #b72c1f 100%);
+    color: #2c140f;
+}
+.zine-section .container,
+.zine-showcase { position: relative; z-index: 1; }
+.zine-section .section-label { color: #7d1c13; }
+.zine-section .section-intro { color: rgba(44, 20, 15, 0.78); }
+.zine-section .section-title { max-width: 820px; }
+
+.zine-showcase {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.25fr);
+    gap: 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+.zine-cover-card,
+.zine-content-card {
+    box-shadow: 0 24px 70px rgba(60, 18, 10, 0.22);
+}
+.zine-cover-card {
+    min-height: 620px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background:
+        linear-gradient(180deg, rgba(143, 0, 0, 0.22) 0 40%, transparent 40%),
+        linear-gradient(180deg, #e52c08 0%, #e52c08 41%, #e9492f 41%, #e9492f 62%, #e62d0b 62%);
+    color: #fff6e7;
+    position: relative;
+    overflow: hidden;
+}
+.zine-eyes {
+    position: absolute;
+    top: 4.5rem;
+    left: 12%;
+    right: 12%;
+    display: flex;
+    justify-content: space-between;
+}
+.zine-eyes span {
+    width: 32%;
+    height: 74px;
+    border: 10px solid #720d12;
+    border-top-width: 16px;
+    border-bottom-width: 8px;
+    border-radius: 8% 72% 8% 72%;
+    transform: rotate(-8deg);
+    position: relative;
+}
+.zine-eyes span:last-child {
+    transform: scaleX(-1) rotate(-8deg);
+}
+.zine-eyes span::after {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #6e2b18;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: inset 7px 7px 0 rgba(255, 214, 116, 0.25);
+}
+.zine-cover-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.zine-cover-card h3 {
+    font-family: var(--sans);
+    font-size: clamp(4rem, 9vw, 8.8rem);
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: #f4a12f;
+    margin-bottom: 1.2rem;
+}
+.zine-cover-card p:not(.zine-cover-label) {
+    max-width: 360px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255, 246, 231, 0.82);
+}
+.zine-link {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    background: #fff6e7;
+    border-color: #fff6e7;
+    color: #8c1b10;
+}
+.zine-link:hover {
+    background: #f4a12f;
+    border-color: #f4a12f;
+    color: #2c140f;
+}
+
+.zine-content-card {
+    background: rgba(255, 248, 235, 0.96);
+    padding: 2rem;
+}
+.zine-content-card h3 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0.6rem 0 1rem;
+    max-width: 720px;
+}
+.zine-content-card p {
+    color: rgba(44, 20, 15, 0.78);
+    line-height: 1.75;
+    max-width: 760px;
+}
+.zine-content-card .project-tag { color: #9a2417; }
+.zine-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+.zine-skills div {
+    padding: 1rem;
+    background: rgba(244, 161, 47, 0.16);
+    border: 1px solid rgba(154, 36, 23, 0.16);
+}
+.zine-skills strong {
+    display: block;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7d1c13;
+    margin-bottom: 0.5rem;
+}
+.zine-skills span {
+    display: block;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: rgba(44, 20, 15, 0.74);
+}
+.zine-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    margin: 1.5rem 0;
+}
+.zine-topic-grid span {
+    padding: 0.7rem 0.8rem;
+    background: #2f7d67;
+    color: #fff6e7;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.zine-topic-grid span:nth-child(3n + 2) { background: #9a2417; }
+.zine-topic-grid span:nth-child(3n) { background: #246998; }
+.zine-content-card .project-meta {
+    border-top-color: rgba(44, 20, 15, 0.14);
+    flex-wrap: wrap;
+}
+.zine-content-card .project-meta span { color: rgba(44, 20, 15, 0.62); }
+
+/* ==========================================================
    FINE ART GALLERY
    ========================================================== */
 .art-gallery {
@@ -765,6 +946,15 @@ img {
 @media (max-width: 1024px) {
     .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .art-gallery { grid-template-columns: repeat(2, 1fr); }
+    .zine-showcase { grid-template-columns: 1fr; }
+    .zine-cover-card { min-height: 500px; }
+}
+
+@media (max-width: 1180px) {
+    .nav { padding: 1rem 2rem; }
+    .nav-right { gap: 1rem; }
+    .nav-links { gap: 1.2rem; }
+    .nav-links a { font-size: 0.72rem; }
 }
 
 @media (max-width: 768px) {
@@ -794,6 +984,11 @@ img {
     .projects-grid { grid-template-columns: 1fr; padding: 0 1.5rem; }
     .project-card.wide { grid-column: span 1; }
 
+    .zine-showcase { padding: 0 1.5rem; }
+    .zine-content-card { padding: 1.5rem; }
+    .zine-skills { grid-template-columns: 1fr; }
+    .zine-topic-grid { grid-template-columns: repeat(2, 1fr); }
+
     .art-gallery { grid-template-columns: 1fr; padding: 0 1.5rem; }
 
     .skills-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -809,4 +1004,8 @@ img {
     .hero-pre { font-size: 0.65rem; }
     .hero-sub { font-size: 0.8rem; }
     .section-title { font-size: 1.8rem; }
+    .zine-cover-card { min-height: 430px; padding: 1.5rem; }
+    .zine-eyes { top: 3rem; left: 8%; right: 8%; }
+    .zine-eyes span { height: 52px; border-width: 7px; border-top-width: 11px; }
+    .zine-topic-grid { grid-template-columns: 1fr; }
 }
