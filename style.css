@@ -496,38 +496,47 @@ ul { list-style: none; }
     position: relative;
     overflow: hidden;
 }
-.zine-eyes {
+.zine-cover-art {
     position: absolute;
-    top: 4.5rem;
-    left: 12%;
-    right: 12%;
-    display: flex;
-    justify-content: space-between;
+    top: 2.8rem;
+    left: 5%;
+    width: 90%;
+    height: auto;
+    overflow: visible;
 }
-.zine-eyes span {
-    width: 32%;
-    height: 74px;
-    border: 10px solid #720d12;
-    border-top-width: 16px;
-    border-bottom-width: 8px;
-    border-radius: 8% 72% 8% 72%;
-    transform: rotate(-8deg);
-    position: relative;
+.zine-bottu-halo { fill: #ef4c35; opacity: 0.72; }
+.zine-bottu { fill: #97070b; }
+.zine-brow,
+.zine-upper-lid { fill: #8a0509; }
+.zine-eye-base { fill: #ef5731; }
+.zine-eye-line {
+    fill: none;
+    stroke: #f47a0d;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
-.zine-eyes span:last-child {
-    transform: scaleX(-1) rotate(-8deg);
+.zine-lower-line {
+    fill: none;
+    stroke: #8a0509;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
-.zine-eyes span::after {
-    content: '';
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #6e2b18;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: inset 7px 7px 0 rgba(255, 214, 116, 0.25);
+.zine-lower-accent {
+    fill: none;
+    stroke: #f47a0d;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.zine-iris { fill: #8b371c; }
+.zine-eye-glint { fill: #ffb35a; }
+.zine-eye-smile {
+    fill: none;
+    stroke: #ffb35a;
+    stroke-width: 7;
+    stroke-linecap: round;
 }
 .zine-cover-label {
     font-size: 0.7rem;
@@ -1005,7 +1014,6 @@ img {
     .hero-sub { font-size: 0.8rem; }
     .section-title { font-size: 1.8rem; }
     .zine-cover-card { min-height: 430px; padding: 1.5rem; }
-    .zine-eyes { top: 3rem; left: 8%; right: 8%; }
-    .zine-eyes span { height: 52px; border-width: 7px; border-top-width: 11px; }
+    .zine-cover-art { top: 2.6rem; left: 3%; width: 94%; }
     .zine-topic-grid { grid-template-columns: 1fr; }
 }
