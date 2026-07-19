@@ -200,4 +200,124 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
         }
     });
+
+    // ── Scroll-to-top button ────────────────────────────────
+    const toTop = document.getElementById('toTop');
+    if (toTop) {
+        const onScrollTop = () => {
+            if (window.scrollY > 600) toTop.classList.add('visible');
+            else toTop.classList.remove('visible');
+        };
+        onScrollTop();
+        window.addEventListener('scroll', onScrollTop, { passive: true });
+        toTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ── Scroll reveal (IntersectionObserver) ───────────────
+    const revealEls = document.querySelectorAll('.project-card, .studio-index-card, .art-piece, .zine-cover-card, .zine-content-card, .timeline-item, .skill-group');
+    revealEls.forEach(el => el.classList.add('reveal'));
+    // Stagger inside grids
+    document.querySelectorAll('.projects-grid').forEach(grid => {
+        Array.from(grid.children).forEach((card, i) => {
+            if (card.classList.contains('reveal')) card.style.setProperty('--i', i % 4);
+        });
+    });
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+        revealEls.forEach(el => io.observe(el));
+    } else {
+        revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // ── Animated stat counters ──────────────────────────────
+    const stats = document.querySelectorAll('.stat-num');
+    const animateCount = (el) => {
+        const raw = el.textContent.trim();
+        const match = raw.match(/^([\d.]+)/);
+        if (!match) return;
+        const target = parseFloat(match[1]);
+        const suffix = raw.replace(/^[\d.]+/, '');
+        const dur = 1100;
+        const start = performance.now();
+        const step = (now) => {
+            const t = Math.min((now - start) / dur, 1);
+            const eased = 1 - Math.pow(1 - t, 3);
+            const val = target * eased;
+            el.textContent = (Number.isInteger(target) ? Math.round(val) : val.toFixed(1)) + suffix;
+            if (t < 1) requestAnimationFrame(step);
+            else el.textContent = raw;
+        };
+        requestAnimationFrame(step);
+    };
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const statIO = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCount(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+        stats.forEach(s => { s.textContent = s.textContent.trim(); statIO.observe(s); });
+    }
+
+    // ── Active nav state ────────────────────────────────────
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sectionsForNav = [];
+    navAnchors.forEach(a => {
+        const id = a.getAttribute('href').slice(1);
+        const sec = document.getElementById(id);
+        if (sec) sectionsForNav.push({ sec, a });
+    });
+    if ('IntersectionObserver' in window && sectionsForNav.length) {
+        const navIO = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const match = sectionsForNav.find(s => s.sec === entry.target);
+                if (match) {
+                    if (entry.isIntersecting) {
+                        navAnchors.forEach(a => a.classList.remove('active'));
+                        match.a.classList.add('active');
+                    }
+                }
+            });
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+        sectionsForNav.forEach(s => navIO.observe(s.sec));
+    }
+
+    // ── Keyboard shortcuts: j/k jump sections, t toggle theme ─
+    const focusable = () => {
+        const el = document.activeElement;
+        return el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable);
+    };
+    document.addEventListener('keydown', (e) => {
+        if (focusable()) return;
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        if (e.key === 't' || e.key === 'T') {
+            themeToggle && themeToggle.click();
+        } else if (e.key === 'j' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            const order = sectionsForNav.map(s => s.sec);
+            const cur = order.findIndex(sec => sec.getBoundingClientRect().top > 1);
+            const target = order[cur === -1 ? order.length - 1 : cur];
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else if (e.key === 'k' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            const order = sectionsForNav.map(s => s.sec).reverse();
+            const cur = order.findIndex(sec => {
+                const r = sec.getBoundingClientRect();
+                return r.bottom < window.innerHeight - 1;
+            });
+            const target = order[cur === -1 ? order.length - 1 : cur];
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
 });

@@ -14,6 +14,21 @@
     <meta name="dcterms.dateCopyrighted" content="2026">
     <meta name="robots" content="noindex, nofollow, noimageindex">
     <meta name="description" content="Architecture, design, art, and cultural storytelling portfolio of Rashmi Bhatia, B.Arch student at the University of Oregon.">
+
+    <!-- Favicon: RB monogram, charcoal with beige dot -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231a1a1a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='34' font-weight='600' fill='%23faf9f7' text-anchor='middle'%3ER%3C/text%3C%3Ccircle cx='48' cy='48' r='5' fill='%23c5a47e'/%3E%3C/svg%3E">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rashmi Bhatia | Architecture Portfolio">
+    <meta property="og:description" content="Architecture, design, art, and cultural storytelling portfolio of Rashmi Bhatia, B.Arch student at the University of Oregon.">
+    <meta property="og:image" content="images/bottu_mag_cover.jpg">
+    <meta property="og:site_name" content="Rashmi Bhatia — Architecture Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rashmi Bhatia | Architecture Portfolio">
+    <meta name="twitter:description" content="Architecture, design, art, and cultural storytelling portfolio of Rashmi Bhatia, B.Arch student at the University of Oregon.">
+    <meta name="twitter:image" content="images/bottu_mag_cover.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -30,7 +45,7 @@
         <div class="nav-right">
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
-                <li><a href="#arch222">Design Studios</a></li>
+                <li><a href="#studios-index">Design Studios</a></li>
                 <li><a href="#culture">Art &amp; Personal Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#resume">Resume &amp; Contact</a></li>
@@ -52,6 +67,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-content">
             <p class="hero-pre">University of Oregon &mdash; B.Arch</p>
             <h1 class="hero-title">
@@ -59,8 +75,9 @@
                 <span class="hero-name">Bhatia</span>
             </h1>
             <p class="hero-sub">Architecture &bull; Design &bull; Art</p>
+            <p class="hero-philosophy">Find perfection in the imperfect.</p>
             <div class="hero-cta">
-                <a href="#design-studio" class="btn btn-primary">View Work</a>
+                <a href="#arch222" class="btn btn-primary">View Work</a>
                 <a href="resume_rashmi_bhatia.pdf" download class="btn btn-outline">Download Resume</a>
                 <a href="#contact" class="btn btn-outline">Get in Touch</a>
             </div>
@@ -102,7 +119,7 @@
                         </div>
                         <div class="stat">
                             <span class="stat-num">30+</span>
-                            <span class="stat-label">Projects</span>
+                            <span class="stat-label">Studio Projects</span>
                         </div>
                     </div>
                 </div>
@@ -110,10 +127,50 @@
         </div>
     </section>
 
+    <!-- Design Studios Index — chapter jump cards -->
+    <section class="section studios-index" id="studios-index" aria-label="Design studios index">
+        <div class="container">
+            <p class="section-label">Design Studios</p>
+            <h2 class="section-title">Five courses, one design journey</h2>
+            <div class="studio-index-grid">
+                <a href="#arch222" class="studio-index-card">
+                    <span class="studio-index-num">01</span>
+                    <span class="studio-index-course">ARCH 222</span>
+                    <span class="studio-index-title">Computer Graphics Studio</span>
+                    <span class="studio-index-meta">Digital · Rhino · Grasshopper · AI</span>
+                </a>
+                <a href="#arch284-studio" class="studio-index-card">
+                    <span class="studio-index-num">02</span>
+                    <span class="studio-index-course">ARCH 284</span>
+                    <span class="studio-index-title">Design Studio II</span>
+                    <span class="studio-index-meta">Foothills Field Institute</span>
+                </a>
+                <a href="#design-studio" class="studio-index-card">
+                    <span class="studio-index-num">03</span>
+                    <span class="studio-index-course">ARCH 283</span>
+                    <span class="studio-index-title">Design Studio</span>
+                    <span class="studio-index-meta">Spatial Thinking Through Making</span>
+                </a>
+                <a href="#design-skills" class="studio-index-card">
+                    <span class="studio-index-num">04</span>
+                    <span class="studio-index-course">ARCH 202</span>
+                    <span class="studio-index-title">Design Skills</span>
+                    <span class="studio-index-meta">Orthographic · Paraline · Model</span>
+                </a>
+                <a href="#studio" class="studio-index-card">
+                    <span class="studio-index-num">05</span>
+                    <span class="studio-index-course">Studio</span>
+                    <span class="studio-index-title">From Concept to Model</span>
+                    <span class="studio-index-meta">Photography · Models · Long Span · City</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- ARCH 222 Computer Graphics / Digital Methods Section -->
     <section class="section projects-section" id="arch222">
         <div class="container">
-            <p class="section-label">ARCH 222 &mdash; Intro to Digital Design Methods</p>
+            <p class="section-label">Studio 01 &mdash; ARCH 222 &mdash; Intro to Digital Design Methods</p>
             <h2 class="section-title">Computer Graphics Studio</h2>
             <p class="section-intro">
                 A workflow-focused studio bridging hand-crafted design and digital practice: Rhino modeling,
@@ -162,7 +219,7 @@
                 </div>
             </div>
 
-            <div class="project-card" data-category="digital">
+            <div class="project-card wide" data-category="digital">
                 <div class="project-images">
                     <img src="images/arch222_m4_studio_ai.png" alt="ARCH 222 Module 4 - Studio Project & AI Rendering" loading="lazy">
                 </div>
@@ -200,22 +257,25 @@
     <!-- ARCH 284 Design Studio II Section -->
     <section class="section projects-section contrast-section" id="arch284-studio">
         <div class="container">
-            <p class="section-label">ARCH 284 &mdash; Architectural Design Studio II</p>
+            <p class="section-label">Studio 02 &mdash; ARCH 284 &mdash; Architectural Design Studio II</p>
             <h2 class="section-title">From Concept to Habitable Form</h2>
             <p class="section-intro">
                 Building on ARCH 283, this studio advances from abstract spatial exercises into an integrated
                 building proposal: the <strong>Foothills Field Institute</strong>, a public biology research center
-                for students and teachers.
+                for students and teachers sited in the foothills. The project resolves a real program through a
+                butterfly roof that harvests rainwater into a site water feature, a rooftop garden, reworked
+                circulation that opens up initially-cramped spaces, and a considered material palette &mdash;
+                evolving through midterm and final pinups in response to review feedback.
             </p>
         </div>
 
         <div class="projects-grid">
             <div class="project-card" data-category="model">
                 <div class="project-images">
-                    <img src="images/arch284_photo_a.jpg" alt="Foothills Field Institute - Exterior Form" loading="lazy">
+                    <img src="images/arch284_photo_a.jpg" alt="Foothills Field Institute - Midterm Pinup, Photo 01" loading="lazy">
                 </div>
                 <div class="project-info">
-                    <span class="project-tag">Midterm Photo</span>
+                    <span class="project-tag">Midterm Pinup</span>
                     <h3>Photo 01</h3>
                     <div class="project-meta">
                         <span>Mixed Media</span>
@@ -226,10 +286,10 @@
 
             <div class="project-card" data-category="model">
                 <div class="project-images">
-                    <img src="images/arch284_photo_b.jpg" alt="Foothills Field Institute - Program and Circulation" loading="lazy">
+                    <img src="images/arch284_photo_b.jpg" alt="Foothills Field Institute - Midterm Pinup, Photo 02" loading="lazy">
                 </div>
                 <div class="project-info">
-                    <span class="project-tag">Midterm Photo</span>
+                    <span class="project-tag">Midterm Pinup</span>
                     <h3>Photo 02</h3>
                     <div class="project-meta">
                         <span>Mixed Media</span>
@@ -240,14 +300,14 @@
 
             <div class="project-card" data-category="model">
                 <div class="project-images">
-                    <img src="images/arch284_photo_c.jpg" alt="Foothills Field Institute - Section and Material Study" loading="lazy">
+                    <img src="images/arch284_photo_c.jpg" alt="Foothills Field Institute - Final Pinup, Photo 03" loading="lazy">
                 </div>
                 <div class="project-info">
-                    <span class="project-tag">Midterm Photo</span>
+                    <span class="project-tag">Final Pinup</span>
                     <h3>Photo 03</h3>
                     <div class="project-meta">
                         <span>Mixed Media</span>
-                        <span>Midterm</span>
+                        <span>Final</span>
                     </div>
                 </div>
             </div>
@@ -277,7 +337,7 @@
     <!-- ARCH 283 Design Studio Section -->
     <section class="section projects-section contrast-section" id="design-studio">
         <div class="container">
-            <p class="section-label">ARCH 283 &mdash; Architectural Design Studio</p>
+            <p class="section-label">Studio 03 &mdash; ARCH 283 &mdash; Architectural Design Studio</p>
             <h2 class="section-title">Spatial Thinking Through Making</h2>
             <p class="section-intro">
                 This studio fundamentally shifted my perspective on architectural representation, challenging me 
@@ -427,7 +487,7 @@
     <!-- ARCH 202 Design Skills Section -->
     <section class="section projects-section" id="design-skills">
         <div class="container">
-            <p class="section-label">ARCH 202 &mdash; Design Skills</p>
+            <p class="section-label">Studio 04 &mdash; ARCH 202 &mdash; Design Skills</p>
             <h2 class="section-title">Foundations of Architectural Representation</h2>
             <p class="section-intro">
                 This course transformed my perception of the built environment, highlighting the minuscule 
@@ -617,7 +677,7 @@
     <!-- Studio / Portfolio 2 Section -->
     <section class="section projects-section contrast-section" id="studio">
         <div class="container">
-            <p class="section-label">Architecture Studio</p>
+            <p class="section-label">Studio 05 &mdash; Architecture Studio</p>
             <h2 class="section-title">Design Studio &mdash; From Concept to Model</h2>
             <p class="section-intro">
                 Studio coursework ranging from photographic composition and diagramming to 
@@ -1058,6 +1118,10 @@
                     <span class="contact-icon">&#9993;</span>
                     <span>bhatiarashmi857@gmail.com</span>
                 </a>
+                <a href="https://www.linkedin.com/in/bhatiarashmi" target="_blank" rel="noopener" class="contact-link">
+                    <span class="contact-icon">&#9679;</span>
+                    <span>LinkedIn &mdash; /in/bhatiarashmi</span>
+                </a>
                 <a href="https://www.instagram.com/brushmiii/" target="_blank" rel="noopener" class="contact-link">
                     <span class="contact-icon">&#9733;</span>
                     <span>@brushmiii</span>
@@ -1079,6 +1143,9 @@
         <button class="lightbox-close" id="lightboxClose">&times;</button>
         <img src="" alt="" id="lightboxImg">
     </div>
+
+    <!-- Scroll-to-top -->
+    <button id="toTop" class="to-top" aria-label="Back to top" hidden>&uarr;</button>
 
     <script src="script.js"></script>
 </body>
