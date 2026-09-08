@@ -3,1148 +3,530 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rashmi Bhatia | Architecture Portfolio</title>
+    <title>Kohler Architects | Architecture That Reflects Your Vision</title>
 
-    <!-- Copyright & Authorship Metadata -->
-    <meta name="author" content="Rashmi Bhatia">
-    <meta name="copyright" content="&copy; 2026 Rashmi Bhatia. All rights reserved.">
-    <meta name="rights" content="All images, drawings, models, and written content are the intellectual property of Rashmi Bhatia. Unauthorized reproduction, distribution, or use is strictly prohibited.">
-    <meta name="dcterms.creator" content="Rashmi Bhatia">
-    <meta name="dcterms.rights" content="Copyright 2026 Rashmi Bhatia. All rights reserved.">
+    <meta name="author" content="Kohler Architects Inc.">
+    <meta name="description" content="Kohler Architects Inc. — residential and commercial architecture on the Mid-Peninsula since 1981. Architecture that reflects your vision and goals for the home of your dreams.">
     <meta name="dcterms.dateCopyrighted" content="2026">
-    <meta name="robots" content="noindex, nofollow, noimageindex">
-    <meta name="description" content="Architecture, design, art, and cultural storytelling portfolio of Rashmi Bhatia, B.Arch student at the University of Oregon.">
 
-    <!-- Favicon: RB monogram, charcoal with beige dot -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231a1a1a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='34' font-weight='600' fill='%23faf9f7' text-anchor='middle'%3ER%3C/text%3C%3Ccircle cx='48' cy='48' r='5' fill='%23c5a47e'/%3E%3C/svg%3E">
+    <!-- Favicon: Kohler mark — navy tile, white rotated square, sage center -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231b2f52'/%3E%3Crect x='20' y='20' width='24' height='24' transform='rotate(45 32 32)' fill='none' stroke='%23ffffff' stroke-width='4'/%3E%3Crect x='26' y='26' width='12' height='12' transform='rotate(45 32 32)' fill='%239cb87a'/%3E%3C/svg%3E">
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Rashmi Bhatia | Architecture Portfolio">
-    <meta property="og:description" content="Architecture, design, art, and cultural storytelling portfolio of Rashmi Bhatia, B.Arch student at the University of Oregon.">
-    <meta property="og:image" content="images/bottu_mag_cover.jpg">
-    <meta property="og:site_name" content="Rashmi Bhatia — Architecture Portfolio">
+    <meta property="og:title" content="Kohler Architects | Architecture That Reflects Your Vision">
+    <meta property="og:description" content="Residential and commercial architecture on the Mid-Peninsula since 1981. Complete architectural service — from concept to construction.">
+    <meta property="og:image" content="images/itw-palo-alto-modern-farmhouse_1.jpg">
+    <meta property="og:site_name" content="Kohler Architects">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rashmi Bhatia | Architecture Portfolio">
-    <meta name="twitter:description" content="Architecture, design, art, and cultural storytelling portfolio of Rashmi Bhatia, B.Arch student at the University of Oregon.">
-    <meta name="twitter:image" content="images/bottu_mag_cover.jpg">
+    <meta name="twitter:title" content="Kohler Architects | Architecture That Reflects Your Vision">
+    <meta name="twitter:description" content="Residential and commercial architecture on the Mid-Peninsula since 1981.">
+    <meta name="twitter:image" content="images/itw-palo-alto-modern-farmhouse_1.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <a href="#hero" class="nav-logo">RB</a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <a href="#hero" class="brand" aria-label="Kohler Architects — home">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+                <rect width="64" height="64" rx="10" class="brand-mark-tile"/>
+                <rect x="20" y="20" width="24" height="24" transform="rotate(45 32 32)" fill="none" stroke-width="4" class="brand-mark-ring"/>
+                <rect x="26" y="26" width="12" height="12" transform="rotate(45 32 32)" class="brand-mark-core"/>
+            </svg>
+            <span class="brand-word">Kohler<em></em>Architects</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
-        <div class="nav-right">
+        <nav class="site-nav" id="siteNav" aria-label="Primary">
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#studios-index">Design Studios</a></li>
-                <li><a href="#culture">Art &amp; Personal Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#resume">Resume &amp; Contact</a></li>
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#in-the-works">In the Works</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                     <circle cx="12" cy="12" r="5"/>
-                    <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                    <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
                 </svg>
-                <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                 </svg>
             </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="hero">
         <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-content">
-            <p class="hero-pre">University of Oregon &mdash; B.Arch</p>
-            <h1 class="hero-title">
-                <span class="hero-name">Rashmi</span>
-                <span class="hero-name">Bhatia</span>
-            </h1>
-            <p class="hero-sub">Architecture &bull; Design &bull; Art</p>
-            <p class="hero-philosophy">Find perfection in the imperfect.</p>
+        <div class="hero-inner container">
+            <p class="hero-eyebrow">Palo Alto &middot; Est. 1981</p>
+            <h1 class="hero-title">Architecture that reflects your <em>vision</em> and goals for the home of your dreams.</h1>
+            <p class="hero-sub">Residential &amp; commercial architecture on the Mid-Peninsula — complete service from first sketch to final walkthrough.</p>
             <div class="hero-cta">
-                <a href="#arch222" class="btn btn-primary">View Work</a>
-                <a href="resume_rashmi_bhatia.pdf" download class="btn btn-outline">Download Resume</a>
-                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                <a href="#portfolio" class="btn btn-solid">View Portfolio</a>
+                <a href="#contact" class="btn btn-ghost">Schedule a Consultation</a>
             </div>
         </div>
-        <div class="hero-scroll">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
+        <a class="hero-scroll" href="#welcome" aria-label="Scroll to welcome">
+            <span>Scroll</span><i></i>
+        </a>
+    </section>
+
+    <!-- Stats strip -->
+    <section class="stats" aria-label="Firm facts">
+        <div class="container stats-grid">
+            <div class="stat"><span class="stat-num" data-count="45">0</span><span class="stat-label">Years of practice</span></div>
+            <div class="stat"><span class="stat-num" data-count="100" data-suffix="+">0</span><span class="stat-label">New homes designed</span></div>
+            <div class="stat"><span class="stat-num">CA&thinsp;&middot;&thinsp;OR&thinsp;&middot;&thinsp;HI</span><span class="stat-label">Licensed states</span></div>
+            <div class="stat"><span class="stat-num" data-count="4">&times;</span><span class="stat-label">Historic Resources Board chair</span></div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <p class="section-label">About</p>
-                    <h2 class="section-title">Finding perfection in the imperfect</h2>
-                    <p class="about-body">
-                        As an architecture student at the University of Oregon, my design principle is simple:
-                        find perfection in the imperfect. I seek to find beauty in everything around me, bringing
-                        that perspective into every space I design. My work bridges hand-crafted techniques with
-                        advanced digital tools. I love balancing analog methods &mdash; graphite, charcoal, plaster
-                        casting, and physical fabrication &mdash; with precise digital workflows using AutoCAD,
-                        Rhino, Grasshopper, the Adobe Suite, and emerging AI platforms like Raven AI. Before UO,
-                        my background was shaped by rigorous training at Ichen Art Academy, an architecture
-                        workshop at Cal Poly SLO, and founding my graphic design business,
-                        <em>Brushmi's Designs</em>. Today, I channel my passion for community into roles with
-                        AIAS, the UO SACA Promo Committee, and as a co-creator of <em>Bottu Mag</em>. Above all,
-                        I design with compassion, joy, and an absolute dedication to the craft.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-num">4</span>
-                            <span class="stat-label">Courses</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">4.1</span>
-                            <span class="stat-label">GPA &mdash; <a href="https://provost.uoregon.edu/deans-list" target="_blank" rel="noopener" class="deans-list-link">Dean's List</a></span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-num">30+</span>
-                            <span class="stat-label">Studio Projects</span>
-                        </div>
-                    </div>
+    <!-- Welcome -->
+    <section class="section welcome" id="welcome">
+        <div class="container split">
+            <div class="split-media reveal">
+                <figure class="welcome-photo">
+                    <img src="images/welcome-roger-matt.png" alt="Roger and Matthew Kohler in the Kohler Architects office" loading="lazy">
+                    <figcaption>Roger &amp; Matthew Kohler</figcaption>
+                </figure>
+                <div class="welcome-signatures" aria-hidden="true">
+                    <img src="images/welcome-signatures.png" alt="" loading="lazy">
                 </div>
+            </div>
+            <div class="split-copy">
+                <p class="section-label reveal">01 &mdash; Welcome</p>
+                <h2 class="section-title reveal">A quarter-century of service&hellip; and counting</h2>
+                <p class="reveal">Thank you for visiting Kohler Architects Inc. This site is a showcase for our work and a celebration of our decades of service to the Mid-Peninsula community.</p>
+                <p class="reveal">In our portfolio you will see the wide range of our practice and the diversity and quality of our designs. We take great pride in our work, and view each project as an opportunity to create a design that fully meets the needs, requirements, and wishes of the individual client.</p>
+                <p class="reveal">We are big enough to provide a complete architectural service and successfully accomplish exceptional projects &mdash; while at the same time small enough to ensure personal attention for every client, including our direct involvement as the principals of the firm.</p>
+                <p class="reveal">We hope you enjoy your visit. Please <a class="inline-link" href="#contact">contact us</a> if we can be of service to you.</p>
             </div>
         </div>
     </section>
 
-    <!-- Design Studios Index — chapter jump cards -->
-    <section class="section studios-index" id="studios-index" aria-label="Design studios index">
+    <!-- Services -->
+    <section class="section services" id="services">
         <div class="container">
-            <p class="section-label">Design Studios</p>
-            <h2 class="section-title">Five courses, one design journey</h2>
-            <div class="studio-index-grid">
-                <a href="#arch222" class="studio-index-card">
-                    <span class="studio-index-num">01</span>
-                    <span class="studio-index-course">ARCH 222</span>
-                    <span class="studio-index-title">Computer Graphics Studio</span>
-                    <span class="studio-index-meta">Digital · Rhino · Grasshopper · AI</span>
-                </a>
-                <a href="#arch284-studio" class="studio-index-card">
-                    <span class="studio-index-num">02</span>
-                    <span class="studio-index-course">ARCH 284</span>
-                    <span class="studio-index-title">Design Studio II</span>
-                    <span class="studio-index-meta">Foothills Field Institute</span>
-                </a>
-                <a href="#design-studio" class="studio-index-card">
-                    <span class="studio-index-num">03</span>
-                    <span class="studio-index-course">ARCH 283</span>
-                    <span class="studio-index-title">Design Studio</span>
-                    <span class="studio-index-meta">Spatial Thinking Through Making</span>
-                </a>
-                <a href="#design-skills" class="studio-index-card">
-                    <span class="studio-index-num">04</span>
-                    <span class="studio-index-course">ARCH 202</span>
-                    <span class="studio-index-title">Design Skills</span>
-                    <span class="studio-index-meta">Orthographic · Paraline · Model</span>
-                </a>
-                <a href="#studio" class="studio-index-card">
-                    <span class="studio-index-num">05</span>
-                    <span class="studio-index-course">Studio</span>
-                    <span class="studio-index-title">From Concept to Model</span>
-                    <span class="studio-index-meta">Photography · Models · Long Span · City</span>
-                </a>
+            <p class="section-label reveal">02 &mdash; Professional Services</p>
+            <h2 class="section-title reveal">Complete service, from concept to completion of construction</h2>
+            <div class="service-grid">
+                <article class="service-card reveal">
+                    <span class="service-num">I</span>
+                    <h3>Project Initiation, Design &amp; Support</h3>
+                    <p>Beginning with an initial consultation where client goals, objectives, and hopes are established, we manage every aspect of the architectural effort &mdash; site issues (soils, topography, boundaries, placement), design studies (floor plans, elevations, neighborhood factors, massing), and coordination with civil, geotechnical, and structural engineers, energy consultants, and landscape, interior, and lighting professionals.</p>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-num">II</span>
+                    <h3>Construction Documents</h3>
+                    <p>We prepare all necessary construction documents: site, grading &amp; drainage plans, Title&nbsp;24 analysis, demolition plans, dimensioned floor plans, exterior elevations, building sections, roof plans, electrical and mechanical/plumbing plans, interior elevations, foundation and framing plans, and specifications. There is a lot to consider&hellip; our expertise and experience enables us to get it right.</p>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-num">III</span>
+                    <h3>Approvals &amp; Entitlements</h3>
+                    <p>We guide the public design review and approval process &mdash; attending public meetings, submitting plans, and obtaining governing agency approvals and permits. Roger Kohler&rsquo;s service as a member and three-time chair of Palo Alto&rsquo;s Historic Resources Board gives the firm a special understanding of the public approval process that makes your project easier and more assured of success.</p>
+                </article>
+                <article class="service-card reveal">
+                    <span class="service-num">IV</span>
+                    <h3>Complete Project</h3>
+                    <p>Our involvement continues through construction &mdash; meeting with the contractor to review all plans and observing the work as it is built. Being part of the project from start to finish helps assure that construction will be faithful to the design.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- ARCH 222 Computer Graphics / Digital Methods Section -->
-    <section class="section projects-section" id="arch222">
+    <!-- Portfolio -->
+    <section class="section portfolio" id="portfolio">
         <div class="container">
-            <p class="section-label">Studio 01 &mdash; ARCH 222 &mdash; Intro to Digital Design Methods</p>
-            <h2 class="section-title">Computer Graphics Studio</h2>
-            <p class="section-intro">
-                A workflow-focused studio bridging hand-crafted design and digital practice: Rhino modeling,
-                Grasshopper parametric generation, laser-cut fabrication, photoreal Rhino rendering, and
-                AI-assisted visualization with Raven AI / ChatGPT / Gemini (Nano Banana) / Adobe Firefly.
-            </p>
+            <p class="section-label reveal">03 &mdash; Portfolio</p>
+            <h2 class="section-title reveal">A showcase of our work</h2>
+            <p class="section-intro reveal">A few of the hundreds of completed Kohler Architects projects. Select a project for an expanded view.</p>
+            <div class="filter-bar reveal" role="tablist" aria-label="Portfolio filters">
+                <button class="filter-chip is-active" data-filter="all">All</button>
+                <button class="filter-chip" data-filter="single-family">Single Family</button>
+                <button class="filter-chip" data-filter="historic">Historic</button>
+                <button class="filter-chip" data-filter="additions">Additions &amp; Remodels</button>
+                <button class="filter-chip" data-filter="multi-family">Multi-Family</button>
+                <button class="filter-chip" data-filter="accessory">Accessory Structures</button>
+                <button class="filter-chip" data-filter="commercial">Commercial</button>
+            </div>
         </div>
+        <div class="container">
+            <div class="project-grid" id="projectGrid">
 
-        <div class="projects-grid">
-            <div class="project-card" data-category="digital">
-                <div class="project-images">
-                    <img src="images/arch222_m1_laser_cut.png" alt="ARCH 222 Module 1 - Laser Cut Model" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Module 01</span>
-                    <h3>Digital Model &amp; Laser Cut</h3>
-                    <div class="project-meta">
-                        <span>Rhino &amp; Laser Cutter</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="digital">
-                <div class="project-images">
-                    <img src="images/arch222_m2_grasshopper_fence.png" alt="ARCH 222 Module 2 - Grasshopper Fence" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Module 02</span>
-                    <h3>Grasshopper Fence Generation</h3>
-                    <div class="project-meta">
-                        <span>Rhino + Grasshopper</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="digital">
-                <div class="project-images">
-                    <img src="images/arch222_m3_frames.png" alt="ARCH 222 Module 3 - Digital Frames" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Module 03</span>
-                    <h3>Topography &amp; Digital Frames</h3>
-                    <div class="project-meta">
-                        <span>Rhino &amp; Physical Models</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card wide" data-category="digital">
-                <div class="project-images">
-                    <img src="images/arch222_m4_studio_ai.png" alt="ARCH 222 Module 4 - Studio Project & AI Rendering" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Module 04</span>
-                    <h3>Studio Project &amp; AI Rendering</h3>
-                    <div class="project-meta">
-                        <span>Rhino Render &amp; AI Image Gen</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card wide">
-                <div class="project-info" style="padding: 2.5rem 2rem;">
-                    <span class="project-tag">Course Booklet</span>
-                    <h3>ARCH 222 &mdash; Full Course Booklet</h3>
-                    <div class="resume-actions" style="margin-top: 1.25rem;">
-                        <a href="images/arch222_booklet.pdf" target="_blank" class="btn btn-primary">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;">
-                                <path d="M1 12s5-8 11-8 11 8 11 8-5 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                            </svg>
-                            View Booklet
-                        </a>
-                        <a href="images/arch222_booklet.pdf" download class="btn btn-outline">Download PDF</a>
-                    </div>
-                    <div class="project-meta">
-                        <span>ARCH 222 &bull; University of Oregon</span>
-                        <span>83 Pages</span>
-                    </div>
-                </div>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-contemporary">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-contemporary_1.jpg" alt="Palo Alto Contemporary — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Contemporary</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-farmhouse">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-farmhouse_1.jpg" alt="Palo Alto Farmhouse — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Farmhouse</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-modern-farmhouse">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-modern-farmhouse_1.jpg" alt="Palo Alto Modern Farmhouse — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Modern Farmhouse</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-modern">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-modern_2.jpg" alt="Palo Alto Modern — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Modern</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-atherton-french-chateau">
+                    <div class="project-thumb"><img src="images/sf-atherton-french-chateau_1.jpg" alt="Atherton French Chateau — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Atherton French Chateau</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-mountain-view-modern-craftsman">
+                    <div class="project-thumb"><img src="images/sf-mountain-view-modern-craftsman_1.jpg" alt="Mountain View Modern Craftsman — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Mountain View Modern Craftsman</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-transitional">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-transitional_1.jpg" alt="Palo Alto Transitional — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Transitional</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-menlo-park-rustic">
+                    <div class="project-thumb"><img src="images/sf-menlo-park-rustic_1.jpg" alt="Menlo Park Rustic — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Menlo Park Rustic</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="historic" data-project="cat-historic">
+                    <div class="project-thumb"><img src="images/cat-historic_1.jpg" alt="Historic residence — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Historic Residence</h3><span>Historic</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-lake-tahoe-cabin">
+                    <div class="project-thumb"><img src="images/sf-lake-tahoe-cabin_1.jpg" alt="Lake Tahoe Cabin — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Lake Tahoe Cabin</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="additions" data-project="cat-additions-remodels">
+                    <div class="project-thumb"><img src="images/cat-additions-remodels_1.jpg" alt="Addition and remodel — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Addition &amp; Remodel I</h3><span>Additions &amp; Remodels</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-modern-2">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-modern-2_1.jpg" alt="Palo Alto Modern 2 — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Modern 2</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-mountain-view-craftsman">
+                    <div class="project-thumb"><img src="images/sf-mountain-view-craftsman_1.jpg" alt="Mountain View Craftsman — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Mountain View Craftsman</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-napa-vineyard-estate">
+                    <div class="project-thumb"><img src="images/sf-napa-vineyard-estate_1.jpg" alt="Napa Vineyard Estate — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Napa Vineyard Estate</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-soho">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-soho_1.jpg" alt="Palo Alto Soho — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Soho</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="commercial" data-project="com-commercial-1">
+                    <div class="project-thumb"><img src="images/com-commercial-1_1.jpg" alt="Commercial project — Kohler Architects" loading="lazy"></div>
+                    <div class="project-info"><h3>Commercial Interior</h3><span>Commercial</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-san-carlos-craftsman">
+                    <div class="project-thumb"><img src="images/sf-san-carlos-craftsman_1.jpg" alt="San Carlos Craftsman — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>San Carlos Craftsman</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-spanish">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-spanish_1.jpg" alt="Palo Alto Spanish — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Spanish</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-craftsman">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-craftsman_1.jpg" alt="Palo Alto Craftsman — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Craftsman</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="additions" data-project="cat-additions-remodels-2">
+                    <div class="project-thumb"><img src="images/cat-additions-remodels-2_1.jpg" alt="Addition and remodel — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Addition &amp; Remodel II</h3><span>Additions &amp; Remodels</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-modern-prairie">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-modern-prairie_1.jpg" alt="Palo Alto Modern Prairie — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Modern Prairie</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-mediterranean">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-mediterranean_1.jpg" alt="Palo Alto Mediterranean — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Mediterranean</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-french">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-french_1.jpg" alt="Palo Alto French — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto French</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="multi-family" data-project="cat-multi-family">
+                    <div class="project-thumb"><img src="images/cat-multi-family_1.jpg" alt="Multi-family residence — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Multi-Family Residence</h3><span>Multi-Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-portola-valley-craftsman">
+                    <div class="project-thumb"><img src="images/sf-portola-valley-craftsman_1.jpg" alt="Portola Valley Craftsman — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Portola Valley Craftsman</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-modern-3">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-modern-3_1.jpg" alt="Palo Alto Modern 3 — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Modern 3</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="accessory" data-project="cat-accessory-structures">
+                    <div class="project-thumb"><img src="images/cat-accessory-structures_1.jpg" alt="Accessory structure — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Accessory Structure</h3><span>Accessory Structures</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-contemporary-2">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-contemporary-2_1.jpg" alt="Palo Alto Contemporary 2 — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Contemporary 2</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="commercial" data-project="com-commercial-2">
+                    <div class="project-thumb"><img src="images/com-commercial-2_1.jpg" alt="Commercial renovation — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Commercial Renovation</h3><span>Commercial</span></div>
+                </article>
+                <article class="project-card" data-category="additions" data-project="cat-additions-remodels-3">
+                    <div class="project-thumb"><img src="images/cat-additions-remodels-3_1.jpg" alt="Whole-house remodel — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Addition &amp; Remodel III</h3><span>Additions &amp; Remodels</span></div>
+                </article>
+                <article class="project-card" data-category="commercial" data-project="com-commercial-3">
+                    <div class="project-thumb"><img src="images/com-commercial-3_1.jpg" alt="Commercial building — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Commercial Building</h3><span>Commercial</span></div>
+                </article>
+                <article class="project-card" data-category="single-family" data-project="sf-palo-alto-colonial">
+                    <div class="project-thumb"><img src="images/sf-palo-alto-colonial_1.jpg" alt="Palo Alto Colonial — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Colonial</h3><span>Single Family</span></div>
+                </article>
+                <article class="project-card" data-category="commercial" data-project="com-commercial-4">
+                    <div class="project-thumb"><img src="images/com-commercial-4_1.jpg" alt="Commercial office — Kohler Architects project" loading="lazy"></div>
+                    <div class="project-info"><h3>Commercial Office</h3><span>Commercial</span></div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- ARCH 284 Design Studio II Section -->
-    <section class="section projects-section contrast-section" id="arch284-studio">
+    <!-- In The Works -->
+    <section class="section in-works" id="in-the-works">
         <div class="container">
-            <p class="section-label">Studio 02 &mdash; ARCH 284 &mdash; Architectural Design Studio II</p>
-            <h2 class="section-title">From Concept to Habitable Form</h2>
-            <p class="section-intro">
-                Building on ARCH 283, this studio advances from abstract spatial exercises into an integrated
-                building proposal: the <strong>Foothills Field Institute</strong>, a public biology research center
-                for students and teachers sited in the foothills. The project resolves a real program through a
-                butterfly roof that harvests rainwater into a site water feature, a rooftop garden, reworked
-                circulation that opens up initially-cramped spaces, and a considered material palette &mdash;
-                evolving through midterm and final pinups in response to review feedback.
-            </p>
+            <p class="section-label reveal">04 &mdash; In the Works</p>
+            <h2 class="section-title reveal">From concept to reality</h2>
+            <p class="section-intro reveal">More are on the way. These projects are currently &mdash; or were recently &mdash; in the works, shown to illustrate how we convert concepts into reality.</p>
         </div>
-
-        <div class="projects-grid">
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch284_photo_a.jpg" alt="Foothills Field Institute - Midterm Pinup, Photo 01" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Midterm Pinup</span>
-                    <h3>Photo 01</h3>
-                    <div class="project-meta">
-                        <span>Mixed Media</span>
-                        <span>Midterm</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch284_photo_b.jpg" alt="Foothills Field Institute - Midterm Pinup, Photo 02" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Midterm Pinup</span>
-                    <h3>Photo 02</h3>
-                    <div class="project-meta">
-                        <span>Mixed Media</span>
-                        <span>Midterm</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch284_photo_c.jpg" alt="Foothills Field Institute - Final Pinup, Photo 03" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Final Pinup</span>
-                    <h3>Photo 03</h3>
-                    <div class="project-meta">
-                        <span>Mixed Media</span>
-                        <span>Final</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card wide">
-                <div class="project-info" style="padding: 2.5rem 2rem;">
-                    <span class="project-tag">Midterm Summary</span>
-                    <h3>Foothills Field Institute &mdash; Midterm Booklet</h3>
-                    <div class="resume-actions" style="margin-top: 1.25rem;">
-                        <a href="images/arch284_midterm_summary.pdf" target="_blank" class="btn btn-primary">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;">
-                                <path d="M1 12s5-8 11-8 11 8 11 8-5 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                            </svg>
-                            View Summary
-                        </a>
-                        <a href="images/arch284_midterm_summary.pdf" download class="btn btn-outline">Download PDF</a>
-                    </div>
-                    <div class="project-meta">
-                        <span>ARCH 284 &bull; University of Oregon</span>
-                        <span>11 Pages</span>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="project-grid" id="itwGrid">
+                <article class="project-card" data-category="itw" data-project="itw-palo-alto-modern-farmhouse">
+                    <div class="project-thumb"><img src="images/itw-palo-alto-modern-farmhouse_1.jpg" alt="Palo Alto Modern Farmhouse rendering — in the works" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Modern Farmhouse</h3><span>In the Works</span></div>
+                </article>
+                <article class="project-card" data-category="itw" data-project="itw-palo-alto-contemporary">
+                    <div class="project-thumb"><img src="images/itw-palo-alto-contemporary_1.jpg" alt="Palo Alto Contemporary rendering — in the works" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Contemporary</h3><span>In the Works</span></div>
+                </article>
+                <article class="project-card" data-category="itw" data-project="itw-mountain-view-modern-farmhouse">
+                    <div class="project-thumb"><img src="images/itw-mountain-view-modern-farmhouse_1.jpg" alt="Mountain View Modern Farmhouse rendering — in the works" loading="lazy"></div>
+                    <div class="project-info"><h3>Mountain View Modern Farmhouse</h3><span>In the Works</span></div>
+                </article>
+                <article class="project-card" data-category="itw" data-project="itw-palo-alto-craftsman">
+                    <div class="project-thumb"><img src="images/itw-palo-alto-craftsman_1.jpg" alt="Palo Alto Craftsman — in the works" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Craftsman</h3><span>In the Works</span></div>
+                </article>
+                <article class="project-card" data-category="itw" data-project="itw-los-altos-modern-farmhouse">
+                    <div class="project-thumb"><img src="images/itw-los-altos-modern-farmhouse_1.jpg" alt="Los Altos Modern Farmhouse rendering — in the works" loading="lazy"></div>
+                    <div class="project-info"><h3>Los Altos Modern Farmhouse</h3><span>In the Works</span></div>
+                </article>
+                <article class="project-card" data-category="itw" data-project="itw-palo-alto-mid-century-modern">
+                    <div class="project-thumb"><img src="images/itw-palo-alto-mid-century-modern_1.jpg" alt="Palo Alto Mid-Century Modern — in the works" loading="lazy"></div>
+                    <div class="project-info"><h3>Palo Alto Mid-Century Modern</h3><span>In the Works</span></div>
+                </article>
+                <article class="project-card" data-category="itw" data-project="itw-mountain-view-contemporary">
+                    <div class="project-thumb"><img src="images/itw-mountain-view-contemporary_1.jpg" alt="Mountain View Contemporary — in the works" loading="lazy"></div>
+                    <div class="project-info"><h3>Mountain View Contemporary</h3><span>In the Works</span></div>
+                </article>
+                <article class="project-card" data-category="itw" data-project="itw-los-altos-hills-rustic">
+                    <div class="project-thumb"><img src="images/itw-los-altos-hills-rustic_1.jpg" alt="Los Altos Hills Rustic — in the works" loading="lazy"></div>
+                    <div class="project-info"><h3>Los Altos Hills Rustic</h3><span>In the Works</span></div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- ARCH 283 Design Studio Section -->
-    <section class="section projects-section contrast-section" id="design-studio">
+    <!-- Testimonials -->
+    <section class="section testimonials" id="testimonials">
         <div class="container">
-            <p class="section-label">Studio 03 &mdash; ARCH 283 &mdash; Architectural Design Studio</p>
-            <h2 class="section-title">Spatial Thinking Through Making</h2>
-            <p class="section-intro">
-                This studio fundamentally shifted my perspective on architectural representation, challenging me 
-                to view it not merely as a documentation tool but as an active and critical method of spatial analysis. 
-                By balancing precise technical hand drafting with atmospheric explorations in charcoal, plaster, 
-                and mixed media, I discovered that representation is the foundational language of environmental design.
-            </p>
+            <p class="section-label reveal">05 &mdash; What Clients Say</p>
+            <div class="quote-grid">
+                <figure class="quote-card reveal">
+                    <span class="quote-mark">&ldquo;</span>
+                    <blockquote>Working with Matt Kohler has enabled us to get an ideal architectural result. Matt and Kohler Architects have my highest recommendation.</blockquote>
+                    <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Andy Poggio, 2023</figcaption>
+                </figure>
+                <figure class="quote-card reveal">
+                    <span class="quote-mark">&ldquo;</span>
+                    <blockquote>Matt is always willing to hear our needs and brings in brilliant ideas. Clear about code requirements, which makes the permit application process smooth and fast. We strongly recommend Kohler Architects.</blockquote>
+                    <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> H.L., 2023</figcaption>
+                </figure>
+                <figure class="quote-card reveal">
+                    <span class="quote-mark">&ldquo;</span>
+                    <blockquote>The Kohler team worked with us on our new home construction project and did a fantastic job.</blockquote>
+                    <figcaption><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Xin Liu, 2022</figcaption>
+                </figure>
+            </div>
+            <p class="quote-more reveal">Read more on <a class="inline-link" href="https://www.houzz.com/professionals/architects-and-building-designers/kohler-architects-inc-pfvwus-pf~1736457940" target="_blank" rel="noopener">Houzz</a></p>
         </div>
+    </section>
 
-        <div class="projects-grid">
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch283_hand_drawing.jpg" alt="Hand Drawing Studies" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Observational Drawing</span>
-                    <h3>Hand Drawing Studies</h3>
-                    <p>Time-pressured studies capturing the hand in 30-second, 5-minute, and 15-minute intervals, culminating in a 60-minute study drawn entirely from memory &mdash; a test of mental mapping and the courage to trust one's own hand.</p>
-                    <div class="project-meta">
-                        <span>Graphite</span>
-                        <span>8.5" x 11"</span>
-                    </div>
-                </div>
+    <!-- Team -->
+    <section class="section team" id="team">
+        <div class="container">
+            <p class="section-label reveal">06 &mdash; The Kohler Team</p>
+            <h2 class="section-title reveal">A strong, highly capable, and creative professional staff</h2>
+            <p class="section-intro reveal">Led by founder Roger Kohler and his son Matt, Kohler Architects is firmly established as one of the leading architectural firms on the Mid-Peninsula. Our multi-lingual staff is fluent in Chinese, German, and Farsi.</p>
+            <div class="team-grid">
+                <article class="team-card reveal">
+                    <div class="team-photo"><img src="images/team-roger.png" alt="Roger Kelley Kohler, AIA" loading="lazy"></div>
+                    <h3>Roger Kelley Kohler <small>AIA</small></h3>
+                    <p class="team-role">Founder &middot; Architect</p>
+                    <p class="team-cred">CA C-7334 &middot; OR O-2326 &middot; HI AR-14093</p>
+                    <p>Building on experience gained working with recognized local architects, Roger opened his own office in 1981 specializing in residential architecture. The firm has designed hundreds of new homes &mdash; including many in Palo Alto &mdash; alongside wide-ranging remodels, multi-family, commercial, and historic projects.</p>
+                    <p class="team-edu">University of Oregon &middot; B.Arch 1968 &middot; Licensed 1973</p>
+                </article>
+                <article class="team-card reveal">
+                    <div class="team-photo"><img src="images/team-matt.png" alt="Matthew Kohler, AIA" loading="lazy"></div>
+                    <h3>Matthew Kohler <small>AIA</small></h3>
+                    <p class="team-role">CEO &amp; Partner &middot; Joined 2001</p>
+                    <p class="team-cred">CA C-38100 &middot; Licensed 2019</p>
+                    <p>Matt began his career apprenticing alongside his father. Now a licensed architect and CEO, he leads day-to-day operations and serves as principal designer &mdash; known for high-level design sensibility and attentive client service across custom homes, additions and remodels, multi-family, and restaurant renovations.</p>
+                    <p class="team-edu">California Architectural Licensing Program &middot; 2019</p>
+                </article>
+                <article class="team-card reveal">
+                    <div class="team-photo"><img src="images/team-jeff.png" alt="Jeff Kuo" loading="lazy"></div>
+                    <h3>Jeff Kuo</h3>
+                    <p class="team-role">Architect &middot; Joined 1990</p>
+                    <p class="team-cred">CA C-27349 &middot; Licensed 1997</p>
+                    <p>A creative and talented designer with extensive experience for both individual clients and builders, Jeff has taken a lead role on a wide range of Kohler projects, from concept through final construction drawings &mdash; with a well-earned reputation for quality design and professional service.</p>
+                    <p class="team-edu">Washington University, St. Louis &middot; M.Arch 1990</p>
+                </article>
+                <article class="team-card reveal">
+                    <div class="team-photo"><img src="images/team-uli.png" alt="Uli Dueregger" loading="lazy"></div>
+                    <h3>Uli Dueregger</h3>
+                    <p class="team-role">Designer / Project Manager &middot; Joined 1997</p>
+                    <p class="team-cred">Certified Green Building Professional</p>
+                    <p>Uli produces high-quality assembly and production drawings &mdash; and especially enjoys elevations. Her carefully prepared permit packages help clients earn timely approvals. A Certified Green Building Professional since 2008, she provides valuable &lsquo;green&rsquo; product guidance on our projects.</p>
+                    <p class="team-edu">University of Frankfurt &middot; M.S. Architecture 1994</p>
+                </article>
+                <article class="team-card reveal">
+                    <div class="team-photo"><img src="images/team-haleh.png" alt="Haleh Aboofazeli" loading="lazy"></div>
+                    <h3>Haleh Aboofazeli</h3>
+                    <p class="team-role">Project Manager &middot; Joined 2014</p>
+                    <p class="team-cred">Revit / 3D Visualization</p>
+                    <p>Haleh is a skilled and creative architectural drawing professional with a unique combination of technical capability and varied professional experience. She is proficient in 3D modeling software (Revit) &mdash; a great tool for client visualization.</p>
+                    <p class="team-edu">University of Tehran &middot; B.S. CS 1998 &middot; West Valley College CADD 2014</p>
+                </article>
+                <article class="team-card reveal">
+                    <div class="team-photo"><img src="images/team-laurence.png" alt="Laurence Latombe" loading="lazy"></div>
+                    <h3>Laurence Latombe</h3>
+                    <p class="team-role">Architect &middot; 2002&ndash;2006, rejoined 2016</p>
+                    <p class="team-cred">CA C-31490 &middot; French &amp; Spanish bilingual</p>
+                    <p>A multi-talented architect with wide-ranging experience across residential, resorts/hotels, condominiums, and hospitals/clinics. Detail-oriented and organized in assembling permit plan packages.</p>
+                    <p class="team-edu">U. of Oregon B.Arch 2001 &middot; Stanford M.S. Civil &amp; Env. Eng. 2010</p>
+                </article>
             </div>
-
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch283_01_seven_points.jpg" alt="Seven Points in Collaboration" loading="lazy">
+            <div class="founder-note reveal">
+                <div class="founder-copy">
+                    <h3>Roger Kohler &mdash; community roots</h3>
+                    <p>A Palo Altan since his youth, Roger is a member of the American Institute of Architects and NCARB certified. He served on the City of Palo Alto Historic Resources Board from 1994 to 2020 &mdash; as chairman in 1998, 1999, 2004, and 2015 &mdash; and on the Building Permit Streamlining and Concept Planning committees. A former Eagle Scout, he has mentored Scouting programs, supported local school sports as a youth coach, and is a photographer and artist.</p>
                 </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 01</span>
-                    <h3>Seven Points in Collaboration</h3>
-                    <p>Collaborative drawing exercise exploring how multiple hands and perspectives can converge on a single composition through shared spatial logic.</p>
-                    <div class="project-meta">
-                        <span>Micron Pen</span>
-                        <span>11" x 17"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch283_02_line_composition.jpg" alt="Line Composition" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 02</span>
-                    <h3>Line Composition</h3>
-                    <p>Translating linear relationships into three-dimensional form through chipboard and cardstock, exploring how lines define and divide space.</p>
-                    <div class="project-meta">
-                        <span>Chipboard &amp; Cardstock</span>
-                        <span>7" x 7"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch283_03_plane.jpg" alt="Plane Study" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 03</span>
-                    <h3>Plane</h3>
-                    <p>Investigating how planar elements create enclosure, threshold, and spatial hierarchy through paper and cardboard constructions.</p>
-                    <div class="project-meta">
-                        <span>Paper &amp; Cardboard</span>
-                        <span>7" x 7"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch283_04_canopy.jpg" alt="Canopy" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 04</span>
-                    <h3>Canopy</h3>
-                    <p>Designing an overhead structure that mediates between interior and exterior, exploring shelter, shade, and the filtering of light through mixed media.</p>
-                    <div class="project-meta">
-                        <span>Mixed Media</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch283_04b_landform.jpg" alt="Landform" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 04b</span>
-                    <h3>Landform</h3>
-                    <p>Sculpting terrain to understand how topography shapes architectural decisions &mdash; from drainage to views to the experience of ascent and descent.</p>
-                    <div class="project-meta">
-                        <span>Cardboard &amp; Foamboard</span>
-                        <span>7" x 7"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch283_05_mass_wall.jpg" alt="Mass - Inhibited Wall" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 05</span>
-                    <h3>Mass &mdash; Inhibited Wall</h3>
-                    <p>A plaster casting exploring mass, weight, and the carving of space within solid form. Understanding how walls contain, direct, and reveal.</p>
-                    <div class="project-meta">
-                        <span>Plaster</span>
-                        <span>4" x 7"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card wide" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch283_midterm_gate_path.jpg" alt="Midterm - Gate, Path, Garden, Room" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Midterm Review</span>
-                    <h3>Gate, Path, Garden, Room</h3>
-                    <p>An integrated spatial sequence exploring threshold (gate), movement (path), enclosure (garden), and inhabitation (room) &mdash; the fundamental elements of architectural experience.</p>
-                    <div class="project-meta">
-                        <span>Mixed Media</span>
-                        <span>Midterm</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card wide" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch283_final_gate_path.jpg" alt="Final - Gate, Path, Garden, Room" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Final Review</span>
-                    <h3>Gate, Path, Garden, Room &mdash; Final</h3>
-                    <p>Refined iteration of the spatial sequence, resolving the relationships between threshold, circulation, landscape, and shelter into a cohesive architectural proposition.</p>
-                    <div class="project-meta">
-                        <span>Mixed Media</span>
-                        <span>Final</span>
-                    </div>
+                <div class="founder-timeline">
+                    <div><strong>Kohler Architects Inc.</strong><span>2017 &ndash; Present</span></div>
+                    <div><strong>Kohler Associates Architects</strong><span>1989 &ndash; 2016</span></div>
+                    <div><strong>Roger Kelley Kohler Architect</strong><span>1973 &ndash; 1989</span></div>
+                    <div><strong>Heflin Corporation &mdash; Chief Architect</strong><span>1982 &ndash; 1985</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ARCH 202 Design Skills Section -->
-    <section class="section projects-section" id="design-skills">
+    <!-- Service areas -->
+    <section class="section areas" id="areas">
         <div class="container">
-            <p class="section-label">Studio 04 &mdash; ARCH 202 &mdash; Design Skills</p>
-            <h2 class="section-title">Foundations of Architectural Representation</h2>
-            <p class="section-intro">
-                This course transformed my perception of the built environment, highlighting the minuscule 
-                architectural details that many overlook. By engaging with techniques like orthographic and 
-                paraline projection, color media, and physical model making, I came to understand how aesthetic 
-                beauty can coexist within a structurally sound, livable space.
-            </p>
-        </div>
-
-        <div class="projects-grid">
-            <!-- Assignment 01 -->
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch202_01a_line_tone_color.jpg" alt="Line, Tone, Color, Perception - Sheet 1" loading="lazy">
+            <p class="section-label reveal">07 &mdash; Where We Build</p>
+            <h2 class="section-title reveal">Serving the Mid-Peninsula &mdash; and beyond</h2>
+            <div class="areas-grid reveal">
+                <div class="area-group">
+                    <h3>California</h3>
+                    <p>Palo Alto &middot; Stanford &middot; Mountain View &middot; Los Altos &middot; Los Altos Hills &middot; Menlo Park &middot; Atherton &middot; Portola Valley &middot; La Honda &middot; Los Gatos &middot; Saratoga &middot; Monte Sereno &middot; Cupertino &middot; Santa Clara &middot; Campbell &middot; San Jose &middot; Morgan Hill &middot; Boulder Creek &middot; Redwood City &middot; Emerald Hills &middot; San Mateo &middot; Granada &middot; Montara &middot; Millbrae &middot; Hillsborough &middot; San Francisco &middot; Larkspur &middot; Tiburon &middot; Sea Ranch &middot; Napa &middot; Fremont &middot; Oakland &middot; Orinda &middot; Pinole &middot; Tahoe City &middot; Loomis</p>
                 </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 01</span>
-                    <h3>Line, Tone, Color, Perception</h3>
-                    <p>Explorations in graphite and colored pencil examining fundamental elements of visual perception and architectural representation.</p>
-                    <div class="project-meta">
-                        <span>Graphite &amp; Colored Pencil</span>
-                        <span>11" x 17"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch202_01b_line_tone_color.jpg" alt="Line, Tone, Color, Perception - Sheet 2" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 01 (cont.)</span>
-                    <h3>Line, Tone, Color, Perception</h3>
-                    <p>Further investigations into how line weight, tonal value, and color interact to create depth and spatial understanding.</p>
-                    <div class="project-meta">
-                        <span>Graphite &amp; Colored Pencil</span>
-                        <span>11" x 14"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assignment 02 -->
-            <div class="project-card" data-category="digital">
-                <div class="project-images">
-                    <img src="images/arch202_02a_analytical_diagrams.jpg" alt="Analytical Diagrams - Digital" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 02</span>
-                    <h3>Analytical Diagrams</h3>
-                    <p>Digital diagramming exploring architectural analysis through abstraction. Translating spatial relationships into clear visual communication.</p>
-                    <div class="project-meta">
-                        <span>Adobe Illustrator</span>
-                        <span>11" x 17"</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/arch202_02b_analytical_diagrams_model.jpg" alt="Analytical Diagrams - Physical Model" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 02 (Model)</span>
-                    <h3>Analytical Diagrams &mdash; Physical Model</h3>
-                    <p>Three-dimensional interpretation of analytical diagrams, translating 2D analysis into a physical cardboard and paper model.</p>
-                    <div class="project-meta">
-                        <span>Paper &amp; Cardboard</span>
-                        <span>10" x 8" x 4"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assignment 03 -->
-            <div class="project-card wide" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch202_03_orthographic_i.jpg" alt="Orthographic I" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 03</span>
-                    <h3>Orthographic I</h3>
-                    <p>Plan, section, and elevation drawings rendered in graphite. Understanding how buildings are documented through precise orthographic projection.</p>
-                    <div class="project-meta">
-                        <span>Graphite</span>
-                        <span>19" x 25"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assignment 04 -->
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch202_04_orthographic_ii.jpg" alt="Orthographic II" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 04</span>
-                    <h3>Orthographic II</h3>
-                    <p>Advanced orthographic projection exploring more complex building forms and the relationship between plan and elevation.</p>
-                    <div class="project-meta">
-                        <span>Graphite</span>
-                        <span>14" x 11"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assignment 05 -->
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch202_05_paraline_i.jpg" alt="Paraline Projection I" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 05</span>
-                    <h3>Paraline Projection I</h3>
-                    <p>Axonometric and isometric drawings combining graphite precision with colored pencil to reveal three-dimensional spatial relationships.</p>
-                    <div class="project-meta">
-                        <span>Graphite &amp; Colored Pencil</span>
-                        <span>18" x 24"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assignment 06 -->
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch202_06_perspective_i.jpg" alt="Perspective Projection I" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 06</span>
-                    <h3>Perspective Projection I</h3>
-                    <p>Perspective drawing enriched with paper collage, bringing depth and materiality to architectural visualization through mixed media.</p>
-                    <div class="project-meta">
-                        <span>Graphite, Colored Pencil &amp; Paper Collage</span>
-                        <span>18" x 24"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assignment 07 -->
-            <div class="project-card" data-category="digital">
-                <div class="project-images">
-                    <img src="images/arch202_07_orthographic_iii_autocad.jpg" alt="Orthographic III - AutoCAD" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 07</span>
-                    <h3>Orthographic Projection III</h3>
-                    <p>Transitioning from hand to digital: precise orthographic drawings produced in AutoCAD, bridging traditional skills with industry-standard tools.</p>
-                    <div class="project-meta">
-                        <span>AutoCAD</span>
-                        <span>18" x 24"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assignment 08 -->
-            <div class="project-card" data-category="digital">
-                <div class="project-images">
-                    <img src="images/arch202_08_digital_collage.jpg" alt="Digital Collage" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 08</span>
-                    <h3>Digital Collage</h3>
-                    <p>Compositing imagery in Photoshop to create evocative architectural narratives through layering, texture, and digital manipulation.</p>
-                    <div class="project-meta">
-                        <span>Adobe Photoshop</span>
-                        <span>11" x 17"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Assignment 09 -->
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/arch202_09_paraline_ii.jpg" alt="Paraline Projection II" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Assignment 09</span>
-                    <h3>Paraline Projection II</h3>
-                    <p>Advanced paraline drawing in graphite demonstrating refined technique and deeper understanding of three-dimensional representation.</p>
-                    <div class="project-meta">
-                        <span>Graphite</span>
-                        <span>14" x 14"</span>
-                    </div>
+                <div class="area-group">
+                    <h3>Oregon</h3>
+                    <p>Medford &middot; Rogue River</p>
+                    <h3>Hawaii</h3>
+                    <p>Hilo</p>
+                    <h3>Iowa</h3>
+                    <p>Marion</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Studio / Portfolio 2 Section -->
-    <section class="section projects-section contrast-section" id="studio">
-        <div class="container">
-            <p class="section-label">Studio 05 &mdash; Architecture Studio</p>
-            <h2 class="section-title">Design Studio &mdash; From Concept to Model</h2>
-            <p class="section-intro">
-                Studio coursework ranging from photographic composition and diagramming to 
-                physical model building, city design, and live-work structures. These projects explore 
-                materiality, light, spatial sequence, and the relationship between people and the built environment.
-            </p>
-        </div>
-
-        <div class="projects-grid">
-            <!-- Framed Composition -->
-            <div class="project-card" data-category="photography">
-                <div class="project-images">
-                    <img src="images/p2_framed_composition.jpg" alt="Framed Composition" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Photography</span>
-                    <h3>Framed Composition</h3>
-                    <p>De-objectifying everyday imagery through careful framing and composition, rendering objects practically unrecognizable and unique in their own way.</p>
-                    <div class="project-meta">
-                        <span>Photography</span>
-                        <span>2024</span>
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-copy">
+                <p class="section-label reveal">08 &mdash; Contact</p>
+                <h2 class="section-title reveal">Let&rsquo;s talk about your vision</h2>
+                <p class="reveal">We invite you to call our office to schedule a no-obligation professional consultation &mdash; in person or virtually &mdash; to talk about your architectural vision and how we can help make it a reality.</p>
+                <div class="contact-details reveal">
+                    <a class="contact-line" href="https://goo.gl/maps/p9zsWwsScdzoZ9dG7" target="_blank" rel="noopener">
+                        <span class="contact-k">Address</span>
+                        <span>721 Colorado Avenue, Suite 102<br>Palo Alto, California 94303</span>
+                    </a>
+                    <a class="contact-line" href="tel:+16503281086">
+                        <span class="contact-k">Phone</span>
+                        <span>650.328.1086</span>
+                    </a>
+                    <a class="contact-line" href="mailto:info@kohlerarchitects.com">
+                        <span class="contact-k">Email</span>
+                        <span>info@kohlerarchitects.com</span>
+                    </a>
+                    <div class="contact-line">
+                        <span class="contact-k">Fax</span>
+                        <span>650.321.2860</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Diagramming -->
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/p2_diagramming.jpg" alt="Diagramming" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Analytical</span>
-                    <h3>Diagramming</h3>
-                    <p>Exploring intricate structural details through stippling and cross-hatching on transparent paper, reimagining how objects are perceived.</p>
-                    <div class="project-meta">
-                        <span>Transparent Paper &amp; Markers</span>
-                        <span>14" x 17"</span>
-                    </div>
+                <div class="social-row reveal">
+                    <a href="https://www.instagram.com/kohlerarchitect/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                    <a href="https://twitter.com/kohlerarchitect" target="_blank" rel="noopener" aria-label="Twitter / X">Twitter&thinsp;/&thinsp;X</a>
+                    <a href="https://www.houzz.com/professionals/architects-and-building-designers/kohler-architects-inc-pfvwus-pf~1736457940" target="_blank" rel="noopener" aria-label="Houzz">Houzz</a>
                 </div>
             </div>
-
-            <!-- Surface-Plane -->
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/p2_surface_plane.jpg" alt="Surface-Plane" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Model Building</span>
-                    <h3>Surface-Plane</h3>
-                    <p>Exploring the dynamics of surface planes through triangular forms, creating a sense of movement with floating elements that evoke balance and tension.</p>
-                    <div class="project-meta">
-                        <span>Bristol &amp; Applicator Sticks</span>
-                        <span>7" x 3"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Light Box -->
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/p2_light_box.jpg" alt="Light Box" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Model Building</span>
-                    <h3>Light Box</h3>
-                    <p>Examining how light transforms space. A sun-shaped cutout casts light while purple paper behind a Bristol moon creates atmospheric color &mdash; demonstrating light's impact on the built environment.</p>
-                    <div class="project-meta">
-                        <span>Cardboard, Bristol &amp; Construction Paper</span>
-                        <span>8" x 9" x 4"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Site Integration -->
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/p2_site_integration.jpg" alt="Site Integration" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Model Building</span>
-                    <h3>Site Integration</h3>
-                    <p>Intentional structure placement with a sun-lit pathway, light box on a hill, and applicator sticks symbolizing trees &mdash; integrating architecture with landscape.</p>
-                    <div class="project-meta">
-                        <span>Chipboard &amp; Cardboard</span>
-                        <span>12" x 24"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Long Span -->
-            <div class="project-card wide" data-category="model">
-                <div class="project-images">
-                    <img src="images/p2_long_span.jpg" alt="Long Span Bridge" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Collaboration &bull; Model Building</span>
-                    <h3>Long Span</h3>
-                    <p>A functional 3-foot bridge built entirely from applicator sticks. The hexagonal base piece was replicated and connected to create a structurally sound, aesthetically cohesive span capable of rolling a basketball across.</p>
-                    <div class="project-meta">
-                        <span>Applicator Sticks</span>
-                        <span>3 ft span</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- [RE] Defining City -->
-            <div class="project-card wide" data-category="model">
-                <div class="project-images">
-                    <img src="images/p2_redefining_city.jpg" alt="[RE]Defining City - Cataracta" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Collaboration &bull; Urban Design</span>
-                    <h3>[RE] Defining City &mdash; Cataracta</h3>
-                    <p>A sustainable rainforest city where humans and animals coexist. Featuring eco-friendly homes, treehouses, gondola systems, hydroponic farming, and wind/hydro turbines. Complete with map, diorama, and physical model.</p>
-                    <div class="project-meta">
-                        <span>Bristol, Construction Paper, Wood &amp; Cardboard</span>
-                        <span>Map + Model + Diorama</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Live-Work-Share -->
-            <div class="project-card" data-category="model">
-                <div class="project-images">
-                    <img src="images/p2_live_work_share.jpg" alt="Live-Work-Share" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Model Building</span>
-                    <h3>Live &mdash; Work &mdash; Share</h3>
-                    <p>A to-scale live-work structure featuring an innovative triangular solar panel walkway, open gable roof, and pyramidal side roofs &mdash; designed for living, working, and sharing with loved ones.</p>
-                    <div class="project-meta">
-                        <span>Basswood, Bristol &amp; Applicator Sticks</span>
-                        <span>4" x 7"</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sketchbook -->
-            <div class="project-card" data-category="hand">
-                <div class="project-images">
-                    <img src="images/p2_sketchbook.jpg" alt="Little Black Sketchbook" loading="lazy">
-                </div>
-                <div class="project-info">
-                    <span class="project-tag">Personal</span>
-                    <h3>Little Black Sketchbook</h3>
-                    <p>My most prized possession. I take it everywhere &mdash; whenever I see something interesting, I sketch it. I'm more likely to remember the beauty of a place I have drawn than simply photographed.</p>
-                    <div class="project-meta">
-                        <span>Pen &amp; Paper</span>
-                        <span>6" x 4" &mdash; Ongoing</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ARH 314 Research Section -->
-    <section class="section projects-section" id="research">
-        <div class="container">
-            <p class="section-label">ARH 314 &mdash; Art History</p>
-            <h2 class="section-title">Architectural Research &amp; Writing</h2>
-            <p class="section-intro">
-                A scholarly analysis of Rani Ki Vav, the 11th-century "Queen's Stepwell" in Gujarat, India. 
-                This research paper examines how the principal sculptural forms, religious context, and site 
-                converge to celebrate femininity, solidify beauty standards, and define the roles of women 
-                in Indian society &mdash; connecting art history to questions of power, identity, and architectural purpose.
-            </p>
-        </div>
-
-        <div class="projects-grid">
-            <div class="project-card wide">
-                <div class="project-info" style="padding: 2.5rem 2rem;">
-                    <span class="project-tag">Research Paper</span>
-                    <h3>Rani Ki Vav &mdash; The Queen's Stepwell</h3>
-                    <p>
-                        Built in 1063 CE by Queen Udayamati as a memorial to King Bhimdev I, Rani Ki Vav is an 
-                        "inverted temple" descending seven levels into the earth in the M&#257;ru-Gurjara architectural style. 
-                        My paper argues that the stepwell's commissioning by a widowed queen, its imagery of apsarās 
-                        and celestial women, and its location on the sacred Saraswati River together create a powerful 
-                        statement about women's agency in medieval Indian architecture.
-                    </p>
-                    <p style="margin-top: 0.75rem;">
-                        The comparative analysis places Rani Ki Vav alongside the Kailasa Temple (8th c.) and 
-                        Jagannath Temple (12th c.) to demonstrate how architecture achieves unity through different 
-                        means &mdash; from water access and pilgrimage to carved cliffside excavation &mdash; while 
-                        sharing a common purpose of bringing communities together.
-                    </p>
-                    <div class="project-meta">
-                        <span>ARH 314 &bull; University of Oregon</span>
-                        <span>Fall 2025</span>
-                        <span>11 Pages &bull; 15+ Sources</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cultural Publication Section -->
-    <section class="section zine-section" id="culture">
-        <div class="container">
-            <p class="section-label">Publication Design &mdash; Cultural Storytelling</p>
-            <h2 class="section-title">Bottu Mag: The South Asian Zine</h2>
-            <p class="section-intro">
-                Created for SACA's Utsav programme, <em>Bottu Mag</em> is a creative exploration of cultural identity.
-                It serves as both a personal artistic journey and an educational platform designed to connect
-                students with the rich history, everyday rituals, and vibrant arts of South Asian heritage.
-            </p>
-        </div>
-
-        <div class="zine-showcase">
-            <div class="zine-cover-card">
-                <img class="zine-cover-art" src="images/bottu_mag_cover.jpg" alt="Bottu Mag — cover / first page" loading="lazy">
-                <div class="zine-cover-text">
-                    <p class="zine-cover-label">The South Asian Zine</p>
-                    <h3>Bottu</h3>
-                    <p>
-                        The bottu is more than a mark; it is a gateway. This magazine reclaims a symbol of memory,
-                        identity, and cultural pride while inviting readers to truly see South Asian culture.
-                    </p>
-                    <a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:9816cf9b-4ea4-4df4-b3f0-7a9cad61fbe1" target="_blank" rel="noopener" class="btn btn-primary zine-link">View Magazine</a>
-                </div>
-            </div>
-
-            <div class="zine-content-card">
-                <span class="project-tag">Editorial Strategy &bull; Illustration &bull; Visual Identity</span>
-                <h3>A publication that turns heritage into an accessible design experience</h3>
-                <p>
-                    The magazine translates cultural memory into a student-facing resource: part art book, part guide,
-                    and part invitation. Across its pages, personal essays sit beside illustrated explainers, food spreads,
-                    architectural research, and social observations that make South Asian culture feel tactile and alive.
-                </p>
-
-                <div class="zine-skills">
-                    <div>
-                        <strong>Employer-facing skills</strong>
-                        <span>Publication layout, visual systems, copywriting, cultural research, illustration, art direction, and audience-aware communication.</span>
-                    </div>
-                    <div>
-                        <strong>Community purpose</strong>
-                        <span>Distributed as an Utsav resource to help participants learn, share, and celebrate South Asian culture beyond the event.</span>
-                    </div>
-                </div>
-
-                <div class="zine-topic-grid" aria-label="Bottu Mag content themes">
-                    <span>Identity essays</span>
-                    <span>Cuisine across South Asia</span>
-                    <span>Spill the Chai</span>
-                    <span>Eating with hands</span>
-                    <span>Jewelry &amp; fashion</span>
-                    <span>Westernization</span>
-                    <span>Architecture precedents</span>
-                    <span>Unspoken rules</span>
-                    <span>Ramadan reflections</span>
-                    <span>Urdu dialogue</span>
-                    <span>Bhaiya / sibling bonds</span>
-                    <span>Nani's lessons</span>
-                </div>
-
-                <div class="project-meta">
-                    <span>Magazine / Zine</span>
-                    <span>SACA Utsav</span>
-                    <span>28 Pages</span>
-                    <span>Student Resource</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fine Art Section -->
-    <section class="section projects-section" id="fine-art">
-        <div class="container">
-            <p class="section-label">Fine Art</p>
-            <h2 class="section-title">Charcoal Portraits</h2>
-            <p class="section-intro">
-                Trained at Ichen Art Academy, I've created over 35 oil paintings, charcoal drawings, and digital art pieces. 
-                These charcoal portraits hold deep personal meaning &mdash; each capturing not just a likeness, 
-                but the warmth and spirit of the people I love.
-            </p>
-        </div>
-
-        <div class="art-gallery">
-            <div class="art-piece">
-                <img src="images/p2_nani_charcoal.jpg" alt="Nani - Charcoal Portrait" loading="lazy">
-                <div class="art-overlay">
-                    <h3>Nani</h3>
-                    <p>A portrait of the light of my life, my grandmother. Her wrinkles represent her everlasting smile and her eyes shine with pride. She is what I see when I hear the word love.</p>
-                    <span>Charcoal &bull; 12" x 14" &bull; 2023</span>
-                </div>
-            </div>
-            <div class="art-piece">
-                <img src="images/p2_bliss_charcoal.jpg" alt="Bliss - Charcoal Portrait" loading="lazy">
-                <div class="art-overlay">
-                    <h3>Bliss</h3>
-                    <p>She represents the feeling of wind running through your hair &mdash; absolute calm and contentment. Light moves across her face while dark values define her characteristics.</p>
-                    <span>Charcoal &bull; 12" x 14" &bull; 2022</span>
-                </div>
-            </div>
-            <div class="art-piece">
-                <img src="images/p2_ms_khan_charcoal.jpg" alt="Ms. Khan - Charcoal Portrait" loading="lazy">
-                <div class="art-overlay">
-                    <h3>Ms. Khan</h3>
-                    <p>A memorial portrait for my friend whose mother passed away. I hoped to capture her mother's warmth and patience. This piece taught me that art can heal &mdash; and that everything I create should have meaning and purpose.</p>
-                    <span>Charcoal &bull; 12" x 14" &bull; 2024</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills & Experience Section -->
-    <section class="section skills-section" id="skills">
-        <div class="container">
-            <p class="section-label">Skills &amp; Experience</p>
-            <h2 class="section-title">Tools, Training &amp; Background</h2>
-
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h3>Design Software</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-name">AutoCAD</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Adobe Illustrator</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Adobe Photoshop</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Rhino</span><span class="skill-level intermediate"></span></li>
-                        <li><span class="skill-name">Revit</span><span class="skill-level intermediate"></span></li>
-                        <li><span class="skill-name">Procreate / Canva</span><span class="skill-level proficient"></span></li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Hand Techniques</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-name">Graphite Drawing</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Charcoal Portraiture</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Colored Pencil</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Oil Painting</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Physical Model Building</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Paper Collage</span><span class="skill-level proficient"></span></li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Architecture Skills</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-name">Orthographic Projection</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Paraline / Axonometric</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Perspective Drawing</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Site Analysis</span><span class="skill-level intermediate"></span></li>
-                        <li><span class="skill-name">Concept Modeling</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Digital Collage</span><span class="skill-level proficient"></span></li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Other</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-name">JavaScript / Python</span><span class="skill-level intermediate"></span></li>
-                        <li><span class="skill-name">Graphic Design</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Publication Design</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Photography</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Teaching</span><span class="skill-level proficient"></span></li>
-                        <li><span class="skill-name">Leadership</span><span class="skill-level proficient"></span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="experience-timeline">
-                <h3 class="timeline-title">Education &amp; Experience</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2025 &ndash; Present</div>
-                        <div class="timeline-content">
-                            <h4>University of Oregon &mdash; B.Arch</h4>
-                            <p>5-year professional architecture program. <a href="https://provost.uoregon.edu/deans-list" target="_blank" rel="noopener" class="deans-list-link">Dean's List</a>, 4.1 GPA. Executive Chair, Public Relations &mdash; <a href="https://uoregon.campuslabs.com/engage/organization/students-of-the-indian-subcontinent" target="_blank" rel="noopener" class="deans-list-link">South Asian Cultural Alliance (SACA)</a>. Created <em>Bottu Mag</em> for SACA's Utsav programme. AIA Student Chapter.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Summer 2024</div>
-                        <div class="timeline-content">
-                            <h4>Cal Poly SLO &mdash; Architecture Summer Workshop</h4>
-                            <p>4-week intensive in design fundamentals, structural engineering, site/community planning. Final gallery exhibition.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023 &ndash; Present</div>
-                        <div class="timeline-content">
-                            <h4>Brushmi's Designs &mdash; Founder</h4>
-                            <p>Graphic design business specializing in logos and merchandise. Clients include school teams, student coalitions, and a medical podcast.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2021 &ndash; 2024</div>
-                        <div class="timeline-content">
-                            <h4>Ichen Art Academy</h4>
-                            <p>Mastered charcoal portraiture, oil painting, and digital art. Created 35+ pieces across multiple media. AP Studio Art Bootcamp.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2019 &ndash; 2025</div>
-                        <div class="timeline-content">
-                            <h4>Boy Scouts of America &mdash; Distinguished Eagle Scout</h4>
-                            <p>Co-founded an all-female troop (60+ members). Assistant Senior Patrol Leader. Eagle Project: community mural at Fremont Christian School.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section class="section resume-section contrast-section" id="resume">
-        <div class="container">
-            <p class="section-label">Resume</p>
-            <h2 class="section-title">Download My Resume</h2>
-            <p class="section-intro">
-                One-page overview of my education, skills, design experience, and leadership.
-            </p>
-            <div class="resume-actions">
-                <a href="resume_rashmi_bhatia.pdf" download class="btn btn-primary resume-download-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                    Download PDF
-                </a>
-                <a href="resume_rashmi_bhatia.pdf" target="_blank" class="btn btn-outline">Open in New Tab</a>
-            </div>
-            <div class="resume-embed">
-                <iframe src="resume_rashmi_bhatia.pdf" title="Rashmi Bhatia Resume"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact-section" id="contact">
-        <div class="container">
-            <p class="section-label">Contact</p>
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="contact-body">Interested in collaboration, opportunities, or just want to chat about architecture and design?</p>
-            <div class="contact-links">
-                <a href="mailto:bhatiarashmi857@gmail.com" class="contact-link">
-                    <span class="contact-icon">&#9993;</span>
-                    <span>bhatiarashmi857@gmail.com</span>
-                </a>
-                <a href="https://www.linkedin.com/in/bhatiarashmi" target="_blank" rel="noopener" class="contact-link">
-                    <span class="contact-icon">&#9679;</span>
-                    <span>LinkedIn &mdash; /in/bhatiarashmi</span>
-                </a>
-                <a href="https://www.instagram.com/brushmiii/" target="_blank" rel="noopener" class="contact-link">
-                    <span class="contact-icon">&#9733;</span>
-                    <span>@brushmiii</span>
-                </a>
+            <div class="contact-media reveal">
+                <figure><img src="images/office-outside.png" alt="Kohler Architects office building at 721 Colorado Ave, Palo Alto" loading="lazy"><figcaption>Kohler office building at 721 Colorado Ave., Palo Alto</figcaption></figure>
+                <figure><img src="images/office-inside.png" alt="Inside the Kohler Architects offices" loading="lazy"><figcaption>Kohler offices</figcaption></figure>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Rashmi Bhatia &bull; University of Oregon B.Arch</p>
-            <p class="copyright-notice">All images, drawings, models, written content, and design work displayed on this site are the intellectual property of Rashmi Bhatia. Unauthorized reproduction, distribution, or use of any materials is strictly prohibited without prior written consent.</p>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+                    <rect width="64" height="64" rx="10" class="brand-mark-tile"/>
+                    <rect x="20" y="20" width="24" height="24" transform="rotate(45 32 32)" fill="none" stroke-width="4" class="brand-mark-ring"/>
+                    <rect x="26" y="26" width="12" height="12" transform="rotate(45 32 32)" class="brand-mark-core"/>
+                </svg>
+                <span>Kohler Architects Inc.</span>
+            </div>
+            <p>&copy; 2026 Kohler Architects Inc. All rights reserved. All images, drawings, and written content are the property of Kohler Architects Inc.</p>
+            <p class="footer-note">Website redesign concept &mdash; content emulated from kohlerarchitects.com</p>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">&times;</button>
-        <img src="" alt="" id="lightboxImg">
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project viewer" hidden>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8592;</button>
+        <figure class="lightbox-stage">
+            <img src="" alt="" id="lightboxImg">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8594;</button>
     </div>
 
-    <!-- Scroll-to-top -->
     <button id="toTop" class="to-top" aria-label="Back to top" hidden>&uarr;</button>
 
     <script src="script.js"></script>

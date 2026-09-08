@@ -1,323 +1,220 @@
-/* ==========================================================
-   Rashmi Bhatia — Portfolio Interactions
-   ========================================================== */
+/* Kohler Architects — redesign concept */
 
-document.addEventListener('DOMContentLoaded', () => {
+(function () {
+    "use strict";
 
-    // ── Theme Toggle (Light / Dark) ───────────────────────
-    const themeToggle = document.getElementById('themeToggle');
-    const root = document.documentElement;
-
-    const getPreferredTheme = () => {
-        const stored = localStorage.getItem('rb-theme');
-        if (stored) return stored;
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    /* ------------------------------------------------------------------
+       Project galleries: [project id] -> { title, images: [file, ...] }
+    ------------------------------------------------------------------ */
+    const PROJECTS = {
+        "sf-palo-alto-contemporary": { title: "Palo Alto Contemporary", images: ["sf-palo-alto-contemporary_1.jpg", "sf-palo-alto-contemporary_2.jpg", "sf-palo-alto-contemporary_3.jpg"] },
+        "sf-palo-alto-farmhouse": { title: "Palo Alto Farmhouse", images: ["sf-palo-alto-farmhouse_1.jpg", "sf-palo-alto-farmhouse_2.jpg", "sf-palo-alto-farmhouse_3.jpg"] },
+        "sf-palo-alto-modern-farmhouse": { title: "Palo Alto Modern Farmhouse", images: ["sf-palo-alto-modern-farmhouse_1.jpg", "sf-palo-alto-modern-farmhouse_2.jpg"] },
+        "sf-palo-alto-modern": { title: "Palo Alto Modern", images: ["sf-palo-alto-modern_2.jpg", "sf-palo-alto-modern_3.jpg"] },
+        "sf-atherton-french-chateau": { title: "Atherton French Chateau", images: ["sf-atherton-french-chateau_1.jpg", "sf-atherton-french-chateau_2.jpg"] },
+        "sf-mountain-view-modern-craftsman": { title: "Mountain View Modern Craftsman", images: ["sf-mountain-view-modern-craftsman_1.jpg", "sf-mountain-view-modern-craftsman_2.jpg"] },
+        "sf-palo-alto-transitional": { title: "Palo Alto Transitional", images: ["sf-palo-alto-transitional_1.jpg", "sf-palo-alto-transitional_2.jpg"] },
+        "sf-menlo-park-rustic": { title: "Menlo Park Rustic", images: ["sf-menlo-park-rustic_1.jpg", "sf-menlo-park-rustic_2.jpg"] },
+        "cat-historic": { title: "Historic Residence", images: ["cat-historic_1.jpg", "cat-historic_2.jpg"] },
+        "sf-lake-tahoe-cabin": { title: "Lake Tahoe Cabin", images: ["sf-lake-tahoe-cabin_1.jpg", "sf-lake-tahoe-cabin_2.jpg"] },
+        "cat-additions-remodels": { title: "Addition & Remodel I", images: ["cat-additions-remodels_1.jpg", "cat-additions-remodels_2.jpg"] },
+        "sf-palo-alto-modern-2": { title: "Palo Alto Modern 2", images: ["sf-palo-alto-modern-2_1.jpg", "sf-palo-alto-modern-2_2.jpg"] },
+        "sf-mountain-view-craftsman": { title: "Mountain View Craftsman", images: ["sf-mountain-view-craftsman_1.jpg", "sf-mountain-view-craftsman_2.jpg"] },
+        "sf-napa-vineyard-estate": { title: "Napa Vineyard Estate", images: ["sf-napa-vineyard-estate_1.jpg"] },
+        "sf-palo-alto-soho": { title: "Palo Alto Soho", images: ["sf-palo-alto-soho_1.jpg", "sf-palo-alto-soho_2.jpg"] },
+        "com-commercial-1": { title: "Commercial Interior", images: ["com-commercial-1_1.jpg"] },
+        "sf-san-carlos-craftsman": { title: "San Carlos Craftsman", images: ["sf-san-carlos-craftsman_1.jpg", "sf-san-carlos-craftsman_2.jpg"] },
+        "sf-palo-alto-spanish": { title: "Palo Alto Spanish", images: ["sf-palo-alto-spanish_1.jpg", "sf-palo-alto-spanish_2.jpg"] },
+        "sf-palo-alto-craftsman": { title: "Palo Alto Craftsman", images: ["sf-palo-alto-craftsman_1.jpg", "sf-palo-alto-craftsman_2.jpg"] },
+        "cat-additions-remodels-2": { title: "Addition & Remodel II", images: ["cat-additions-remodels-2_1.jpg", "cat-additions-remodels-2_2.jpg"] },
+        "sf-palo-alto-modern-prairie": { title: "Palo Alto Modern Prairie", images: ["sf-palo-alto-modern-prairie_1.jpg", "sf-palo-alto-modern-prairie_2.jpg"] },
+        "sf-palo-alto-mediterranean": { title: "Palo Alto Mediterranean", images: ["sf-palo-alto-mediterranean_1.jpg", "sf-palo-alto-mediterranean_2.jpg"] },
+        "sf-palo-alto-french": { title: "Palo Alto French", images: ["sf-palo-alto-french_1.jpg", "sf-palo-alto-french_2.jpg"] },
+        "cat-multi-family": { title: "Multi-Family Residence", images: ["cat-multi-family_1.jpg"] },
+        "sf-portola-valley-craftsman": { title: "Portola Valley Craftsman", images: ["sf-portola-valley-craftsman_1.jpg", "sf-portola-valley-craftsman_2.jpg"] },
+        "sf-palo-alto-modern-3": { title: "Palo Alto Modern 3", images: ["sf-palo-alto-modern-3_1.jpg", "sf-palo-alto-modern-3_2.jpg"] },
+        "cat-accessory-structures": { title: "Accessory Structure", images: ["cat-accessory-structures_1.jpg"] },
+        "sf-palo-alto-contemporary-2": { title: "Palo Alto Contemporary 2", images: ["sf-palo-alto-contemporary-2_1.jpg", "sf-palo-alto-contemporary-2_2.jpg"] },
+        "com-commercial-2": { title: "Commercial Renovation", images: ["com-commercial-2_1.jpg", "com-commercial-2_2.jpg"] },
+        "cat-additions-remodels-3": { title: "Addition & Remodel III", images: ["cat-additions-remodels-3_1.jpg", "cat-additions-remodels-3_2.jpg"] },
+        "com-commercial-3": { title: "Commercial Building", images: ["com-commercial-3_1.jpg", "com-commercial-3_2.jpg"] },
+        "sf-palo-alto-colonial": { title: "Palo Alto Colonial", images: ["sf-palo-alto-colonial_1.jpg"] },
+        "com-commercial-4": { title: "Commercial Office", images: ["com-commercial-4_1.jpg", "com-commercial-4_2.jpg"] },
+        "itw-palo-alto-modern-farmhouse": { title: "Palo Alto Modern Farmhouse", images: ["itw-palo-alto-modern-farmhouse_1.jpg", "itw-palo-alto-modern-farmhouse_2.jpg"] },
+        "itw-palo-alto-contemporary": { title: "Palo Alto Contemporary", images: ["itw-palo-alto-contemporary_1.jpg", "itw-palo-alto-contemporary_2.jpg"] },
+        "itw-mountain-view-modern-farmhouse": { title: "Mountain View Modern Farmhouse", images: ["itw-mountain-view-modern-farmhouse_1.jpg", "itw-mountain-view-modern-farmhouse_2.jpg"] },
+        "itw-palo-alto-craftsman": { title: "Palo Alto Craftsman", images: ["itw-palo-alto-craftsman_1.jpg", "itw-palo-alto-craftsman_2.jpg"] },
+        "itw-los-altos-modern-farmhouse": { title: "Los Altos Modern Farmhouse", images: ["itw-los-altos-modern-farmhouse_1.jpg", "itw-los-altos-modern-farmhouse_2.jpg"] },
+        "itw-palo-alto-mid-century-modern": { title: "Palo Alto Mid-Century Modern", images: ["itw-palo-alto-mid-century-modern_1.jpg", "itw-palo-alto-mid-century-modern_2.jpg"] },
+        "itw-mountain-view-contemporary": { title: "Mountain View Contemporary", images: ["itw-mountain-view-contemporary_1.jpg"] },
+        "itw-los-altos-hills-rustic": { title: "Los Altos Hills Rustic", images: ["itw-los-altos-hills-rustic_1.jpg", "itw-los-altos-hills-rustic_2.jpg"] }
     };
 
-    const setTheme = (theme) => {
-        root.setAttribute('data-theme', theme);
-        localStorage.setItem('rb-theme', theme);
-    };
+    const header = document.getElementById("siteHeader");
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    const themeToggle = document.getElementById("themeToggle");
+    const toTop = document.getElementById("toTop");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxCaption = document.getElementById("lightboxCaption");
 
-    // Apply saved/preferred theme immediately
-    setTheme(getPreferredTheme());
+    /* --- Theme -------------------------------------------------------- */
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+    let theme = localStorage.getItem("kohler-theme") || (prefersDark.matches ? "dark" : "light");
+    applyTheme(theme);
 
-    themeToggle.addEventListener('click', () => {
-        const current = root.getAttribute('data-theme');
-        setTheme(current === 'dark' ? 'light' : 'dark');
+    themeToggle.addEventListener("click", () => {
+        theme = theme === "dark" ? "light" : "dark";
+        localStorage.setItem("kohler-theme", theme);
+        applyTheme(theme);
     });
 
-    // Listen for OS-level theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('rb-theme')) {
-            setTheme(e.matches ? 'dark' : 'light');
+    function applyTheme(value) {
+        document.documentElement.setAttribute("data-theme", value);
+    }
+
+    /* --- Header state + back-to-top ------------------------------------ */
+    function onScroll() {
+        header.classList.toggle("is-scrolled", window.scrollY > 40);
+        if (toTop) {
+            const show = window.scrollY > 900;
+            toTop.hidden = !show && !toTop.classList.contains("is-visible");
+            toTop.classList.toggle("is-visible", show);
         }
-    });
-
-    // ── Nav scroll state ──────────────────────────────────
-    const nav = document.getElementById('nav');
-    const onScroll = () => {
-        nav.classList.toggle('scrolled', window.scrollY > 40);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-    // ── Mobile nav toggle ─────────────────────────────────
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-        links.classList.toggle('open');
-        toggle.classList.toggle('active');
-    });
-    links.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-            links.classList.remove('open');
-            toggle.classList.remove('active');
-        });
+    if (toTop) {
+        toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    }
+
+    /* --- Mobile menu ---------------------------------------------------- */
+    navToggle.addEventListener("click", () => {
+        const open = header.classList.toggle("menu-open");
+        navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        document.body.style.overflow = open ? "hidden" : "";
     });
 
-    // ── Smooth scroll for anchor links ────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) {
-                const offset = nav.offsetHeight + 20;
-                const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
+    navLinks.addEventListener("click", (e) => {
+        if (e.target.closest("a") && header.classList.contains("menu-open")) {
+            header.classList.remove("menu-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+        }
+    });
+
+    /* --- Reveal on scroll ------------------------------------------------ */
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                revealObserver.unobserve(entry.target);
             }
         });
-    });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
-    // ── Scroll-reveal animations ──────────────────────────
-    const animateElements = () => {
-        const selectors = [
-            '.project-card',
-            '.zine-cover-card',
-            '.zine-content-card',
-            '.art-piece',
-            '.about-text',
-            '.skill-group',
-            '.timeline-item',
-            '.section-title',
-            '.section-intro',
-            '.about-stats'
-        ];
-        document.querySelectorAll(selectors.join(',')).forEach(el => {
-            if (!el.classList.contains('fade-in')) {
-                el.classList.add('fade-in');
-            }
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+    /* --- Animated counters ------------------------------------------------- */
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            counterObserver.unobserve(el);
+            const target = parseInt(el.dataset.count, 10);
+            const suffix = el.dataset.suffix || "";
+            const duration = 1400;
+            const start = performance.now();
+            (function tick(now) {
+                const p = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(target * eased) + (p === 1 ? suffix : "");
+                if (p < 1) requestAnimationFrame(tick);
+            })(start);
         });
+    }, { threshold: 0.6 });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
+    document.querySelectorAll(".stat-num[data-count]").forEach((el) => counterObserver.observe(el));
+
+    /* --- Portfolio filtering ------------------------------------------------- */
+    const chips = document.querySelectorAll(".filter-chip");
+    const cards = document.querySelectorAll("#projectGrid .project-card");
+
+    chips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+            chips.forEach((c) => c.classList.remove("is-active"));
+            chip.classList.add("is-active");
+            const filter = chip.dataset.filter;
+            cards.forEach((card) => {
+                const match = filter === "all" || card.dataset.category === filter;
+                card.classList.toggle("is-hidden", !match);
             });
-        }, {
-            threshold: 0.08,
-            rootMargin: '0px 0px -40px 0px'
-        });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    };
-    animateElements();
-
-    // ── Lightbox ──────────────────────────────────────────
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-
-    document.querySelectorAll('.project-images img, .art-piece img').forEach(img => {
-        img.addEventListener('click', (e) => {
-            e.stopPropagation();
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
         });
     });
 
-    const closeLightbox = () => {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-    };
+    /* --- Lightbox -------------------------------------------------------------- */
+    let gallery = [];
+    let galleryTitle = "";
+    let index = 0;
+    let lastFocus = null;
 
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
+    document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("click", () => openLightbox(card.dataset.project));
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("role", "button");
+        card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openLightbox(card.dataset.project);
+            }
+        });
+    });
+
+    function openLightbox(projectId) {
+        const project = PROJECTS[projectId];
+        if (!project) return;
+        gallery = project.images;
+        galleryTitle = project.title;
+        index = 0;
+        lastFocus = document.activeElement;
+        lightbox.hidden = false;
+        document.body.style.overflow = "hidden";
+        render();
+        document.getElementById("lightboxClose").focus();
+    }
+
+    function render() {
+        const file = gallery[index];
+        lightboxImg.src = "images/" + file;
+        lightboxImg.alt = galleryTitle + " — Kohler Architects project, image " + (index + 1) + " of " + gallery.length;
+        lightboxCaption.textContent = galleryTitle + "  ·  " + (index + 1) + " / " + gallery.length;
+    }
+
+    function step(delta) {
+        index = (index + delta + gallery.length) % gallery.length;
+        render();
+    }
+
+    function closeLightbox() {
+        lightbox.hidden = true;
+        document.body.style.overflow = "";
+        lightboxImg.src = "";
+        if (lastFocus) lastFocus.focus();
+    }
+
+    document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+    document.getElementById("lightboxPrev").addEventListener("click", () => step(-1));
+    document.getElementById("lightboxNext").addEventListener("click", () => step(1));
+    lightbox.addEventListener("click", (e) => {
         if (e.target === lightbox) closeLightbox();
     });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeLightbox();
+
+    document.addEventListener("keydown", (e) => {
+        if (lightbox.hidden) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") step(-1);
+        if (e.key === "ArrowRight") step(1);
     });
-
-    // ── Active nav link highlighting ──────────────────────
-    const sections = document.querySelectorAll('section[id]');
-    const navLinksAll = document.querySelectorAll('.nav-links a');
-    const highlightNav = () => {
-        const scrollY = window.scrollY + nav.offsetHeight + 100;
-        sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
-            if (scrollY >= top && scrollY < top + height) {
-                navLinksAll.forEach(link => {
-                    link.style.color = '';
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.style.color = 'var(--text)';
-                    }
-                });
-            }
-        });
-    };
-    window.addEventListener('scroll', highlightNav, { passive: true });
-
-    // ── Stagger animation for grid items ──────────────────
-    const staggerObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const parent = entry.target;
-                const children = parent.querySelectorAll('.fade-in');
-                children.forEach((child, i) => {
-                    setTimeout(() => {
-                        child.classList.add('visible');
-                    }, i * 120);
-                });
-                staggerObserver.unobserve(parent);
-            }
-        });
-    }, { threshold: 0.05 });
-
-    document.querySelectorAll('.projects-grid, .art-gallery, .skills-grid').forEach(grid => {
-        staggerObserver.observe(grid);
-    });
-
-    // ── Copyright Protection ──────────────────────────────
-    // Disable right-click context menu on images
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
-            return false;
-        });
-        // Disable drag
-        img.setAttribute('draggable', 'false');
-        img.style.webkitUserDrag = 'none';
-    });
-
-    // Disable "Save Image As" via long-press on mobile
-    document.addEventListener('touchstart', (e) => {
-        if (e.target.tagName === 'IMG') {
-            e.target.style.pointerEvents = 'none';
-            setTimeout(() => { e.target.style.pointerEvents = ''; }, 500);
-        }
-    }, { passive: false });
-
-    // Disable keyboard shortcuts for saving (Ctrl+S / Cmd+S)
-    document.addEventListener('keydown', (e) => {
-        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-            e.preventDefault();
-        }
-    });
-
-    // ── Scroll-to-top button ────────────────────────────────
-    const toTop = document.getElementById('toTop');
-    if (toTop) {
-        const onScrollTop = () => {
-            if (window.scrollY > 600) toTop.classList.add('visible');
-            else toTop.classList.remove('visible');
-        };
-        onScrollTop();
-        window.addEventListener('scroll', onScrollTop, { passive: true });
-        toTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
-    // ── Scroll reveal (IntersectionObserver) ───────────────
-    const revealEls = document.querySelectorAll('.project-card, .studio-index-card, .art-piece, .zine-cover-card, .zine-content-card, .timeline-item, .skill-group');
-    revealEls.forEach(el => el.classList.add('reveal'));
-    // Stagger inside grids
-    document.querySelectorAll('.projects-grid').forEach(grid => {
-        Array.from(grid.children).forEach((card, i) => {
-            if (card.classList.contains('reveal')) card.style.setProperty('--i', i % 4);
-        });
-    });
-    if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
-        revealEls.forEach(el => io.observe(el));
-    } else {
-        revealEls.forEach(el => el.classList.add('is-visible'));
-    }
-
-    // ── Animated stat counters ──────────────────────────────
-    const stats = document.querySelectorAll('.stat-num');
-    const animateCount = (el) => {
-        const raw = el.textContent.trim();
-        const match = raw.match(/^([\d.]+)/);
-        if (!match) return;
-        const target = parseFloat(match[1]);
-        const suffix = raw.replace(/^[\d.]+/, '');
-        const dur = 1100;
-        const start = performance.now();
-        const step = (now) => {
-            const t = Math.min((now - start) / dur, 1);
-            const eased = 1 - Math.pow(1 - t, 3);
-            const val = target * eased;
-            el.textContent = (Number.isInteger(target) ? Math.round(val) : val.toFixed(1)) + suffix;
-            if (t < 1) requestAnimationFrame(step);
-            else el.textContent = raw;
-        };
-        requestAnimationFrame(step);
-    };
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        const statIO = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCount(entry.target);
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.4 });
-        stats.forEach(s => { s.textContent = s.textContent.trim(); statIO.observe(s); });
-    }
-
-    // ── Active nav state ────────────────────────────────────
-    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-    const sectionsForNav = [];
-    navAnchors.forEach(a => {
-        const id = a.getAttribute('href').slice(1);
-        const sec = document.getElementById(id);
-        if (sec) sectionsForNav.push({ sec, a });
-    });
-    if ('IntersectionObserver' in window && sectionsForNav.length) {
-        const navIO = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const match = sectionsForNav.find(s => s.sec === entry.target);
-                if (match) {
-                    if (entry.isIntersecting) {
-                        navAnchors.forEach(a => a.classList.remove('active'));
-                        match.a.classList.add('active');
-                    }
-                }
-            });
-        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-        sectionsForNav.forEach(s => navIO.observe(s.sec));
-    }
-
-    // ── Keyboard shortcuts: j/k jump sections, t toggle theme ─
-    const focusable = () => {
-        const el = document.activeElement;
-        return el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable);
-    };
-    document.addEventListener('keydown', (e) => {
-        if (focusable()) return;
-        if (e.metaKey || e.ctrlKey || e.altKey) return;
-        if (e.key === 't' || e.key === 'T') {
-            themeToggle && themeToggle.click();
-        } else if (e.key === 'j' || e.key === 'ArrowDown') {
-            e.preventDefault();
-            const order = sectionsForNav.map(s => s.sec);
-            const cur = order.findIndex(sec => sec.getBoundingClientRect().top > 1);
-            const target = order[cur === -1 ? order.length - 1 : cur];
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else if (e.key === 'k' || e.key === 'ArrowUp') {
-            e.preventDefault();
-            const order = sectionsForNav.map(s => s.sec).reverse();
-            const cur = order.findIndex(sec => {
-                const r = sec.getBoundingClientRect();
-                return r.bottom < window.innerHeight - 1;
-            });
-            const target = order[cur === -1 ? order.length - 1 : cur];
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
+})();
