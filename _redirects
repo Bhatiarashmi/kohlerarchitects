@@ -1,0 +1,12 @@
+/welcome/                /#welcome              301
+/professional-services/  /#services             301
+/portfolio/              /#portfolio            301
+/in-the-works/           /#in-the-works         301
+/the-kohler-team/        /#team                 301
+/contact-us/             /#contact              301
+/proven-professionals/   /#awards               301
+/single-family-homes/    /#portfolio            301
+/additions_remodels/     /#portfolio            301
+/commercial/             /#portfolio            301
+/newkohler/testamonials/ /#testimonials         301
+/project/*               /#portfolio            301
